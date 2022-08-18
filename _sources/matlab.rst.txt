@@ -7,7 +7,7 @@
 This MATLAB code is documented with Sphinx
 using the `matlabdomain extension <https://github.com/sphinx-contrib/matlabdomain/blob/master/README.rst>`_.
 
-See `here <https://thread-3-2.github.io/lie_group_time_integrator/matlab.html#module-src>`_.
+See `here <https://thread-3-2.github.io/lie_group_time_integrator/matlab.html#module-src>`_ for SE(3) related functions.
 
 
 src
