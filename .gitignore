@@ -128,6 +128,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# casadi library
-src/casadi-osx-matlabR2015a-v3.4.5/
-src/results/
+# vs code
+.vscode
+
