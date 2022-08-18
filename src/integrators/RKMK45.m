@@ -22,7 +22,6 @@ function [sol,err] = variableRKMK45(vecField,action,p,h)
             
     sol = action(exponentialSE3N(sigma),p);  
             
-    err = norm(sigma-sigmaHat,2); %We take the difference at the level
-        %of the Lie algebra approximations
+    err = norm(sigma-sigmaHat,2); %We take the difference at the level of the Lie algebra approximations
        
 end
