@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Variational integrator &#8212; variable_stepsize_lie_group_integrator 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MATLAB code" href="matlab.html" />
+    <link rel="prev" title="Initial boundary value problem" href="ibvp.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="variational-integrator">
+<span id="vi"></span><h1>Variational integrator<a class="headerlink" href="#variational-integrator" title="Permalink to this heading">¶</a></h1>
+<section id="continuous-setting">
+<span id="continuous-vi"></span><h2>Continuous setting<a class="headerlink" href="#continuous-setting" title="Permalink to this heading">¶</a></h2>
+<p>In this work, the electromechanically coupled beam dynamics is approximated within the constrained discrete variational scheme
+with the null space projection. The Lagrange-d’Alembert principle can be extended to constrained systems by enforcing the constraints via Lagrange multipliers as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \delta \int_{0}^{T} \left[  L( \mathbf{q}, \dot{\mathbf{q}}) - \mathbf{g}^T(\mathbf{q})\cdot \boldsymbol\lambda \right] dt + \int_{0}^{T}\mathbf{f}^{\rm ext}( t) \cdot \delta \mathbf{q}dt=0,
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is the configuration, <span class="math notranslate nohighlight">\(L( \mathbf{q}, \dot{\mathbf{q}})\)</span> is the Lagrangian, <span class="math notranslate nohighlight">\(\mathbf{g}\)</span> represents holonomic constraints,
+<span class="math notranslate nohighlight">\(\boldsymbol\lambda\)</span> is the Lagrangian multiplier and <span class="math notranslate nohighlight">\(\mathbf{f}^{\rm ext}(t)\)</span> is the external force. By considering
+the electrical effect in geometrically exact beam, the electric potential <span class="math notranslate nohighlight">\(\phi_o\)</span> and the incremental variables <span class="math notranslate nohighlight">\((\alpha, \beta )\)</span> are
+treated as the electrical degrees of freedom <span class="math notranslate nohighlight">\(\boldsymbol\phi=\begin{bmatrix}  \phi_o&amp; \alpha&amp; \beta \end{bmatrix}\)</span> such that
+the configuration of the beam model is extended to</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{q}=\begin{bmatrix}
+                \boldsymbol{\varphi}&amp; \mathbf{d}_1
+                &amp;\mathbf{d}_2&amp;\mathbf{d}_3&amp; \boldsymbol\phi
+            \end{bmatrix}^T.
+\end{align}\]</div>
+<p>According to the kinematic assumptions in geometrically exact beams, the directors have to fulfill the orthogonal constraints</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \mathbf{g}( \mathbf{q})=\begin{bmatrix}
+                        \frac{1}{2}(\mathbf{d}_1^T \mathbf{d}_1-1) \\
+                        \frac{1}{2}(\mathbf{d}_2^T \mathbf{d}_2-1)\\
+                        \frac{1}{2}(\mathbf{d}_3^T \mathbf{d}_3-1) \\
+                        \mathbf{d}_1^T\mathbf{d}_2\\
+                        \mathbf{d}_1^T\mathbf{d}_3\\
+                        \mathbf{d}_2^T\mathbf{d}_3
+                        \end{bmatrix}=\mathbf{0}.
+\end{align}\end{split}\]</div>
+<p>The continuous Lagrangian contains the difference between the kinetic energy <span class="math notranslate nohighlight">\(T(\dot{\mathbf{q}})\)</span> and the internal
+potential energy <span class="math notranslate nohighlight">\(V(\mathbf{q})\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    L(\mathbf{q}, \dot{\mathbf{q}})= T(\dot{\mathbf{q}}) -V(\mathbf{q}).
+\end{align}\]</div>
+<p>Since the electrical variables do not contribute to the kinetic energy, the kinetic energy for geometrically exact beams is computed as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    T=  \int_c \left( \frac{1}{2} A_{\rho} \left| \dot{\boldsymbol  \varphi} \right| ^2 + \frac{1}{2} \sum_{i=1}^{2} M^i_{\rho}\left| \dot{\mathbf{d}}_i \right| ^2 \right) ds, \label{T}
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_{\rho}\)</span> is the mass density per reference arc-length and <span class="math notranslate nohighlight">\(M^i_{\rho}\)</span> are the principle mass moments of
+inertia of cross section.   In accordance with the configuration for beam, the component of the consistent mass matrix corresponding
+to the electrical degree of freedom <span class="math notranslate nohighlight">\(\boldsymbol\phi\)</span> will be zero.</p>
+<p>For the coupled hyperelastic material in DEA, the internal potential energy is computed  by an integration of the beam strain
+energy density <span class="math notranslate nohighlight">\(\Omega_b\)</span> over the beam center line</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    V(\mathbf{q}) = \int_c \Omega_b (s) ds.
+\end{align}\]</div>
+<p>The external force <span class="math notranslate nohighlight">\(\mathbf{f}^{\rm ext}\)</span> contains all non-conservative forces, such as the viscoelastic effect in this work.
+Based on the Kelvin-Voigt model, the non-conservative work contributed by the viscoelastic effect is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    W^{\rm vis}=\int_{B_0}  \mathbf{P}^{\rm vis}: \mathbf{F}dV,
+\end{align}\]</div>
+<p>where the work is computed from the two conjugate quantities being the first Piola-Kirchhoff stress <span class="math notranslate nohighlight">\(\mathbf{P}^{\rm vis}\)</span> from
+the Kelvin-Voigt model and the deformation gradient <span class="math notranslate nohighlight">\(\mathbf{F}\)</span>. In this case, the external force corresponding to the viscoelastic
+effect can be formulated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{f}^{\rm vis}(\mathbf{q},\dot{\mathbf{q}})=\frac{\partial W^{\rm vis}}{\partial \mathbf{q}}= \int_{B_0} \frac{\partial W^{\rm vis}}{\partial \mathbf{F} } : \frac{\partial \mathbf{F}}{\partial \mathbf{q} } dV =  \int_c \int_{\Sigma} \mathbf{P}^{\rm vis}: \frac{\partial \mathbf{F}}{\partial \mathbf{q} }dAds.
+\end{align}\]</div>
+</section>
+<section id="discrete-euler-lagrange-equations">
+<span id="discrete-vi"></span><h2>Discrete Euler-Lagrange equations<a class="headerlink" href="#discrete-euler-lagrange-equations" title="Permalink to this heading">¶</a></h2>
+<p>The beam is first spatially discretized with the 1D finite elements, where one-dimensional Lagrange-type linear shape functions are
+applied in the discretization of beam configuration <span class="math notranslate nohighlight">\(\mathbf{q}\)</span>. In this case, the beam directors are directly discretized in
+space together with the beam centroids. Then the variational integration scheme is applied to temporally discretize the action of
+the dynamic system, by which the good long term energy behavior can be obtained. In the variational integration scheme, the action
+integral within the time interval <span class="math notranslate nohighlight">\((t_n,t_{n+1})\)</span> is approximated with the discrete Lagrangian <span class="math notranslate nohighlight">\(L_d\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \int_{t_n}^{t_{n+1}} L(\mathbf{q},  \dot{\mathbf{q}})dt \approx L_d(\mathbf{q}_n,\mathbf{q}_{n+1}) = \Delta t L(\frac{\mathbf{q}_{n+1}+\mathbf{q}_n}{2},\frac{\mathbf{q}_{n+1}-\mathbf{q}_n}{\Delta t}),
+\end{align}\]</div>
+<p>where the discrete Lagrangian <span class="math notranslate nohighlight">\(L_d\)</span> is computed by applying the finite difference approximation to the velocity <span class="math notranslate nohighlight">\(\dot{\mathbf{q}}\)</span>
+and the midpoint rule to the configuration <span class="math notranslate nohighlight">\(\mathbf{q}\)</span>, i.e.</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \dot{\mathbf{q}}\approx \frac{\mathbf{q}_{n+1}-\mathbf{q}_n}{\Delta t}, \;\;\;\;\; \mathbf{q}\approx\frac{\mathbf{q}_{n+1}+\mathbf{q}_n}{2} \label{mid}.
+\end{align}\]</div>
+<p>After the temporal discretization, the discrete Euler-Lagrange equations can be obtained by taking the variation of the discrete
+action and requiring stationarity. To eliminate the constraint forces <span class="math notranslate nohighlight">\(\boldsymbol\lambda\)</span> from the system, the nodal
+reparametrization <span class="math notranslate nohighlight">\(\mathbf{q}_{n+1} = \mathbf{F}_d (\mathbf{u}_{n+1}, \mathbf{q}_{n})\)</span> and the discrete null space
+matrix <span class="math notranslate nohighlight">\(\mathbf{P}_d\)</span> are applied to the discrete Euler-Lagrange equations leading to</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{P}_d^T(\mathbf{q}_n) \left[ \frac{\partial L_d(\mathbf{q}_{n-1}, \mathbf{q}_{n})}{\partial \mathbf{q}_{n}} + \frac{\partial L_d\left( \mathbf{q}_{n}, \mathbf{F}_d (\mathbf{u}_{n+1}, \mathbf{q}_{n})\right) }{\partial \mathbf{q}_{n}} + \mathbf{f}_n^{\rm ext-} + \mathbf{f}_{n-1}^{\rm ext+} \right] = \mathbf{0},
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{u}_{n+1}\)</span> is the generalized configuration acting as the unknown variable, <span class="math notranslate nohighlight">\(\mathbf{f}_n^{\rm ext-}\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{f}_{n-1}^{\rm ext+}\)</span> are the discrete generalized external forces evaluated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{f}_n^{\rm ext-}=\frac{\Delta t}{2} \mathbf{f}^{\rm vis} (\frac{\mathbf{q}_{n+1}+\mathbf{q}_n}{2},\frac{\mathbf{q}_{n+1}-\mathbf{q}_n}{\Delta t}),
+    \mathbf{f}_{n-1}^{\rm ext+}=\frac{\Delta t}{2} \mathbf{f}^{\rm vis} (\frac{\mathbf{q}_{n-1}+\mathbf{q}_n}{2},\frac{\mathbf{q}_{n-1}-\mathbf{q}_n}{\Delta t}).
+\end{align}\]</div>
+<p>The internal null space matrix at time <span class="math notranslate nohighlight">\(t_n\)</span> is written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \mathbf{P}_{\rm int}(\mathbf{q}_n)=
+    \begin{bmatrix}
+        \mathbf{I} &amp; \mathbf{0} &amp; \mathbf{0}\\
+        \mathbf{0} &amp; -\hat{\mathbf{d}}_{1,n} &amp; \mathbf{0}\\
+        \mathbf{0} &amp; -\hat{\mathbf{d}}_{2,n} &amp; \mathbf{0}\\
+        \mathbf{0} &amp; -\hat{\mathbf{d}}_{3,n} &amp; \mathbf{0}\\
+        \mathbf{0}&amp; \mathbf{0}&amp; \mathbf{I}
+    \end{bmatrix}, \label{null}
+\end{align}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\hat{\mathbf{d}}_{i,n}\)</span> denotes the skew-symmetric matrix corresponding to the director vector
+<span class="math notranslate nohighlight">\(\mathbf{d}_{i,n}\)</span> at <span class="math notranslate nohighlight">\(t_n\)</span> and <span class="math notranslate nohighlight">\(\mathbf{I}\)</span> is the 3 by 3 identity matrix. For a multibody dynamic system
+composed of flexible beam actuators, rigid bodies, joints and constraints, the null space matrix can be designed by considering
+the electric potential as extra degree of freedom as well.</p>
+<p>To solve the discrete Euler-Lagrange equations efficiently, the system can be reduced further into the minimal possible dimensions
+by use of the nodal reparametrization. The generalized configuration of the electromechanically coupled beam is specified by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{u}=\begin{bmatrix} \mathbf{u}_\varphi&amp; \boldsymbol\theta&amp;\mathbf{v}\end{bmatrix}^T
+\end{align}\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mathbf{u}_\varphi,  \boldsymbol\theta$ and $\mathbf{v}\)</span> characterizing the incremental displacement, the incremental
+rotation and the incremental electric potential, respectively. In this case, the nodal configuration for the next time step can
+be updated as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \mathbf{q}_{n+1} = \mathbf{F}_d ({\mathbf{u}_{n+1}}, \mathbf{q}_{n})=
+    \begin{bmatrix}
+        \boldsymbol{\varphi}_n+\mathbf{u}_\varphi\\
+        {\rm exp}(\hat{\boldsymbol\theta})\cdot \mathbf{d}_{1,n}\\
+        {\rm exp}(\hat{\boldsymbol\theta})\cdot \mathbf{d}_{2,n}\\
+        {\rm exp}(\hat{\boldsymbol\theta})\cdot \mathbf{d}_{3,n}\\
+        \boldsymbol{\phi} + \mathbf{v}
+    \end{bmatrix}.
+\end{align}\end{split}\]</div>
+<p>By means of the nodal reparametrization, the unknowns of the discrete Euler-Lagrange equation are changed from <span class="math notranslate nohighlight">\(\mathbf{q}_{n+1}\)</span> to the generalized
+variables <span class="math notranslate nohighlight">\(\mathbf{u}_{n+1}\)</span>. The nonlinear equation system is solved by use of the  Newton-Rapson algorithm with the tangent
+matrix at iteration <span class="math notranslate nohighlight">\(i\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \mathbf{K}_T^i
+    =\mathbf{P}^T(\mathbf{q}_n)  \frac{\partial \mathbf{R}^L(\mathbf{q}_{n+1}^i)}{\partial \mathbf{q}_{n+1}^i} \frac{\partial \mathbf{q}_{n+1}(\mathbf{u}_{n+1}^i)}{\partial \mathbf{u}_{n+1}^i},
+\end{align}\]</div>
+<p>in which <span class="math notranslate nohighlight">\(\mathbf{R}^L(\mathbf{q}_{n+1})\)</span> is the residual of the discrete Euler-Lagrange equation.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">variable_stepsize_lie_group_integrator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ibvp.html">Initial boundary value problem</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variational integrator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#continuous-setting">Continuous setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#discrete-euler-lagrange-equations">Discrete Euler-Lagrange equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="ibvp.html" title="previous chapter">Initial boundary value problem</a></li>
+      <li>Next: <a href="matlab.html" title="next chapter">MATLAB code</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Ergys Çokaj, Andrea Leone, Davide Murari.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.1.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/vi.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
