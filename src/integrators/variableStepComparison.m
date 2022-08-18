@@ -15,7 +15,6 @@ function [err,TT,Y] = variableStepComparison(vecField,action,z0,T,tol)
     while TT(i)<T-5*eps
         err = tol + 1;
         while err>tol    
-%             [z,err] = VariableStepFreeRK4SE3N(f,action,h,Y(:,i));
             [z,err] = variableRKMK45(vecField,action,Y(:,i),h);
             accepted = (err<tol);
             if accepted
