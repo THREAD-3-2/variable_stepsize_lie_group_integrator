@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'elec_mech_beam'
-copyright = '2022, Dengpeng Huang'
-author = 'Dengpeng Huang'
+project = 'variable_stepsize_lie_group_integrator'
+copyright = '2022, Ergys Çokaj, Andrea Leone, Davide Murari'
+author = 'Ergys Çokaj, Andrea Leone, Davide Murari'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
