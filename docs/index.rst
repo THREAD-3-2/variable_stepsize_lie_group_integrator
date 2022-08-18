@@ -1,13 +1,17 @@
-========================================
- Documentation of `elec_mech_beam`
-========================================
+==========================================================
+ Documentation of `variable_stepsize_lie_group_integrator`
+==========================================================
 
-`elec_mech_beam <https://github.com/THREAD-3-2/elec_mech_beam>`_
-is a MATLAB code for an electromechanically coupled beam model for dielectric elastomer actuators, which is developed at 
-the `Institute of Applied Dynamics <https://www.ltd.tf.fau.de/>`_. 
-It is part of the source code for the paper `(Huang and Leyendecker, 2022) <https://dx.doi.org/10.1007/s00466-021-02115-0>`_.
-The initial boundary value problem is described in :ref:`Initial boundary value problem <ibvp>`. To solve this problem, the variational integrator is 
-applied as shown in :ref:`Variational integrator <vi>`. The code can be run from a main file at `src/main.m`.
+`variable_stepsize_lie_group_integrator <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator>`_
+is a MATLAB code for the comparison of the performance of constant and variable step size methods. 
+The RKMK pair coming from Dormand–Prince method (DOPRI 5(4), also denoted as RKMK(5,4)) is compared to RKMK of order 5 (denoted by RKMK5).
+The methods are tested on the N-fold 3D pendulum example. The quality of the
+approximation is measured against a reference solution obtained with ODE45 from
+MATLAB with a strict tolerance. The code is part of the source code for the papers: 
+
+
+It is part of the source code developed at the `Department of Mathematical Sciences at NTNU <https://www.ntnu.edu/imf>`_,for the papers `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_ and `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) arXiv) <https://doi.org/10.48550/arXiv.2109.12325>`_.
+
 
 Contents
 ========
