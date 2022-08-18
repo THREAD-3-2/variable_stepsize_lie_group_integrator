@@ -6,7 +6,7 @@ close all;
 
 %% Setting the parameters 
 
-Prange = 2:2:20;
+Prange = 2:2:20; 
 
 accVar = zeros(length(Prange),1);
 accConst = accVar;
@@ -24,20 +24,14 @@ for P = Prange
     m = rand(P,1)+0.5; %Set random masses
     L = 0*L + Lref/P; 
     m = 0*m + 1;
-    
-    P
-    
+ 
     [q0,w0,z0] = initializeStat(P);
-    
-    Energy = @(q,w) 0.5*w'*assembleR(q,L,m)*w + potential(q,L,m);
 
-    disp("Energy of this initial condition: "+num2str(Energy(q0,w0)));
-
-    t0 = 0;
-    T = 3; 
-    N = 1000; 
+    t0 = 0;         % initial time
+    T = 3;          % final time
+    N = 1000;       % number of time steps
     time = linspace(t0,T,N); 
-    dt = time(2)-time(1);
+    dt = time(2)-time(1);   % stepsize
 
     getq = @(v) extractq(v);
     getw = @(v) extractw(v);
@@ -63,6 +57,8 @@ for P = Prange
     qC(:,1) = q0;
     pC(:,1) = Mat*q0;
 
+
+    %% COMPARISON BETWEEN RKMK45 AND RKMK5, i.e. VARIABLE STEPSIZE AGAINST CONSTANT ONE
 
     chunk=400;
     Z=zeros(length(z0),chunk);
@@ -108,14 +104,14 @@ for P = Prange
     TT=TT(:,1:i);
 
 
-    Nsteps = i-1
+    Nsteps = i-1;
     tt = linspace(0,T,Nsteps+1);
     dt = tt(2) - tt(1);
     zRK45 = zeros(length(z0),Nsteps);
     zRK45(:,1) = z0;
     count = 1;
     ts = 0;
-    
+
     for k=1:Nsteps
         zRK45(:,k+1) = RKMK5(vecField,action,zRK45(:,k),dt);
         ts = ts + dt;
@@ -131,15 +127,11 @@ for P = Prange
     zC = zC';
     zC = reorder(zC);
     zRef = zC(:,end);
-    % 
-    % hh = min(find((timeSol>4.8) == 1));
-    % zCStrict = zC(:,hh);
 
     accVar(index) = norm(zRef-Y(:,end),2);
     accConst(index) = norm(zRef-zRK45(:,end),2);
     steps(index) = Nsteps;
     index = index + 1;
-    
 end
 
 figure;
