@@ -18,10 +18,10 @@ src
 .. mat:autofunction:: src.main
 
 
-.. mat:autoscript:: src.a_ini
+.. mat:autoscript:: src.RKMK5
 
 
-.. mat:autoscript:: src.b_dEL_AD
+.. mat:autoscript:: src.RKMK45
 
 
-.. mat:autoscript:: src.c_NR
+.. mat:autoscript:: src.variableStepComparison
