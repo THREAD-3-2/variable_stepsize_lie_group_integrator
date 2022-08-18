@@ -15,13 +15,10 @@ src
 
 :mod:`src` module contains the following source code files:
     
-.. mat:autofunction:: src.main
+.. mat:autofunction:: src.main_const_vs_var_stepsize_comparison.m
 
 
 .. mat:autoscript:: src.RKMK5
 
 
 .. mat:autoscript:: src.RKMK45
-
-
-.. mat:autoscript:: src.variableStepComparison
