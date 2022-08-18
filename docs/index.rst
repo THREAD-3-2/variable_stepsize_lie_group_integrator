@@ -10,7 +10,7 @@ approximation is measured against a reference solution obtained with ODE45 from
 MATLAB with a strict tolerance. The code is part of the source code for the papers: 
 
 
-It is part of the source code developed at the `Department of Mathematical Sciences at NTNU <https://www.ntnu.edu/imf>`_,for the papers `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_ and `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) arXiv) <https://doi.org/10.48550/arXiv.2109.12325>`_.
+It is part of the source code developed at the `Department of Mathematical Sciences at NTNU <https://www.ntnu.edu/imf>`_, for the papers `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_ and `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) arXiv) <https://doi.org/10.48550/arXiv.2109.12325>`_.
 
 
 Contents
