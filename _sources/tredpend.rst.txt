@@ -57,10 +57,10 @@ Equations :ref:`Equation (1) <eq:1>`-:ref:`Equation (2) <eq:2>` define the dynam
 .. math::
 
     \begin{align}
-        \ensuremath{\psi_*}(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N,
+        \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N,
     \end{align}
     
-where :math:`\ensuremath{\psi}` is defined as in subsection \ref{286subsec:cartesian}.
+where :math:`\Psi` is defined as in subsection \ref{286subsec:cartesian}.
 
 Since :math:`R(q)` defines a linear invertible map (see `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
 
