@@ -1,4 +1,10 @@
 function res = dexpinvSE3N(sigma, input)
+% dexpinv map on SE(3)^N
+%
+% :param sigma: 
+% :param input:
+
+% :returns: 
 
     N = floor(length(sigma)/6);
     res = zeros(6*N,1);
