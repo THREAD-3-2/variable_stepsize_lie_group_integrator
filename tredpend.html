@@ -38,17 +38,19 @@
 <p>We describe here the specific problem of a chain of <span class="math notranslate nohighlight">\(N\)</span> connected 3D pendulums, whose dynamics evolves on <span class="math notranslate nohighlight">\((TS^2)^N\)</span>.</p>
 <section id="equations-of-motion">
 <span id="eom"></span><h2>Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this heading">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>eq:1</p>
+</dd>
+</dl>
+<p><span class="xref std std-ref">Equation (2)</span></p>
 <p>Let us consider a  chain of <span class="math notranslate nohighlight">\(N\)</span> pendulums subject to constant gravity <span class="math notranslate nohighlight">\(\rho_0g\)</span>. The system is modeled by <span class="math notranslate nohighlight">\(\rho_0N\)</span> rigid, massless links serially connected by spherical joints, with the first link connected to a fixed point placed at the origin of the ambient space <span class="math notranslate nohighlight">\(\rho_0\mathbb{R}^3\)</span>. We neglect friction and interactions among the pendulums.</p>
 <p>The modeling part comes from cite{lee2018} and we omit details. We denote by <span class="math notranslate nohighlight">\(\rho_0q_i\in S^2\)</span> the configuration vector of the <span class="math notranslate nohighlight">\(\rho_0i-`th mass, :math:\)</span>rho_0m_i`, of the chain. Following cite{lee2018}, we express the Euler–Lagrange equations for our system in terms of the configuration variables <span class="math notranslate nohighlight">\(\rho_0(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}\)</span>, and their angular velocities <span class="math notranslate nohighlight">\(\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}\)</span>, defined be the following kinematic equations:</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="eq-1">
+<span id="equation-eq-1"></span><span class="eqno">(1)<a class="headerlink" href="#eq-1" title="Permalink to this equation">¶</a></span>\[\begin{align}
     \dot{q}_i = \omega_i\times q_i, \quad i=1,\dots,N.
 \end{align}\]</div>
 <p>The Euler–Lagrange equations of the system can be written as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-    R(q)\dot{\omega} = \left[\sum_{\substack{j=1\\ j\neq i}}^N M_{ij}|\omega_j|^2\hat{q}_i q_j - \Big(\sum_{j=i}^N m_j\Big)gL_i \hat{q}_i e_3 \right]_{i=1,...,N} = \begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\in\mathbb{R}^{3N},
-\end{align}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\rho_0R(q)\in\mathbb{R}^{3N\times 3N}\)</span> is a symmetric block matrix defined as</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
@@ -65,7 +67,7 @@
 \<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Equations eqref{286eq:kineqs}-eqref{286eq:eleqs} define the dynamics of the N-fold pendulum, and hence a vector field <span class="math notranslate nohighlight">\(\rho_0F\in\mathfrak{X}((TS^2)^N)\)</span>. We now find a function <span class="math notranslate nohighlight">\(\rho_0f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N\)</span> such that</p>
+<p>Equations <a class="reference internal" href="#eq-1"><span class="std std-ref">Equation (1)</span></a>-<span class="xref std std-ref">Equation (2)</span> define the dynamics of the N-fold pendulum, and hence a vector field <span class="math notranslate nohighlight">\(\rho_0F\in\mathfrak{X}((TS^2)^N)\)</span>. We now find a function <span class="math notranslate nohighlight">\(\rho_0f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align}
     \infgen(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N,
@@ -78,7 +80,8 @@
 \end{align}\]</div>
 <p>we can rewrite the ODEs for the angular velocities as follows:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align}
+\[\begin{split}:name: eq:3
+ \begin{align}
      \dot{\omega}= A_{q}^{-1}\left(\begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\right) =\begin{bmatrix}
      h_1(q,\omega) \\ \vdots \\ h_N(q,\omega)
      \end{bmatrix} = \begin{bmatrix}
@@ -87,8 +90,8 @@
      a_N(q,\omega)\times q_N
      \end{bmatrix}.
 \end{align}\end{split}\]</div>
-<p>In equation eqref{286eq:omegadot} the <span class="math notranslate nohighlight">\(\rho_0r_i`s are defined as in \eqref{286eq:eleqs},
-and :math:\)</span>rho_0a_1,…,a_N:(TS^2)^Nrightarrow mathbb{R}^3` can be defined as <span class="math notranslate nohighlight">\(\rho_0a_i(q,\omega):=q_i\times h_i(q,\omega)\)</span>. Thus, the map <span class="math notranslate nohighlight">\(\rho_0f\)</span> is given by</p>
+<p>In equation <span class="xref std std-ref">Equation (3)</span> the <span class="math notranslate nohighlight">\(\rho_0r_i`s are defined as in :ref:`Equation (2) &lt;eq:2&gt;\)</span>,
+and <span class="math notranslate nohighlight">\(\rho_0a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3\)</span> can be defined as <span class="math notranslate nohighlight">\(\rho_0a_i(q,\omega):=q_i\times h_i(q,\omega)\)</span>. Thus, the map <span class="math notranslate nohighlight">\(\rho_0f\)</span> is given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} \begin{align}
      f(q,\omega) = \begin{bmatrix}
