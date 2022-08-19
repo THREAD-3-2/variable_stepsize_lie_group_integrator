@@ -1,4 +1,9 @@
 function res = exponentialSE3N(sigma)
+% exponential map on SE(3)^N 
+%
+% :param sigma: 
+%
+% :returns: 
 
     N = floor(length(sigma)/6);
     res = zeros(3*N,4);
