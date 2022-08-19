@@ -1,4 +1,12 @@
 function [sol, err] = variableRKMK45(vecField, action, p, h)
+% RKMK5(4)
+%
+% :param vecField: 
+% :param action: 
+% :param p:
+% :param h:
+%
+% :returns: 
 
     %Computes one time step update with RKMK of order 4
 
