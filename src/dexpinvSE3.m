@@ -1,5 +1,10 @@
 function vec = dexpinvSE3 (sigma, input)
+% dexpinv map on the SE3 group
+%
+% :param sigma: 
+% :param input:
 
+% :returns: 
     
     A = sigma(1:3);
     a = sigma(4:6);
