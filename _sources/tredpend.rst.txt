@@ -13,7 +13,7 @@ Equations of motion
 
 Let us consider a  chain of :math:`N` pendulums subject to constant gravity :math:`g`. The system is modeled by :math:`N` rigid, massless links serially connected by spherical joints, with the first link connected to a fixed point placed at the origin of the ambient space :math:`\mathbb{R}^3`. We neglect friction and interactions among the pendulums. 
 
-The modeling part comes from \cite{lee2018} and we omit details. We denote by :math:`q_i\in S^2` the configuration vector of the :math:`i-`th mass, :math:`m_i`, of the chain. Following \cite{lee2018}, we express the Euler–Lagrange equations for our system in terms of the configuration variables :math:`(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}`, and their angular velocities :math:`\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}`, defined be the following kinematic equations:
+The modeling part comes from `(Lee, Leok and McClamroch, (2018)) <https://doi.org/10.1007/978-3-319-56953-6>`_ and we omit details. We denote by :math:`q_i\in S^2` the configuration vector of the :math:`i-`th mass, :math:`m_i`, of the chain. Following `(Lee, Leok and McClamroch, (2018)) <https://doi.org/10.1007/978-3-319-56953-6>`_, we express the Euler–Lagrange equations for our system in terms of the configuration variables :math:`(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}`, and their angular velocities :math:`\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}`, defined be the following kinematic equations:
 
 .. math::
     :name: eq:1 
@@ -61,7 +61,7 @@ Equations :ref:`Equation (1) <eq:1>`-:ref:`Equation (2) <eq:2>` define the dynam
     
 where :math:`\psi` is defined as in subsection \ref{286subsec:cartesian}.
 
-Since :math:`R(q)` defines a linear invertible map (see \cite{celledoni2021})
+Since :math:`R(q)` defines a linear invertible map (see `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
 
 .. math::
 
