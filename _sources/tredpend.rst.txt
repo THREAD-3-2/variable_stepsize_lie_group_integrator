@@ -11,9 +11,6 @@ We describe here the specific problem of a chain of :math:`N` connected 3D pendu
 Equations of motion
 -------------------
 
-:name: eq:1
-:ref:`Equation (2) <eq:2>`
-
 Let us consider a  chain of :math:`N` pendulums subject to constant gravity :math:`\rho_0g`. The system is modeled by :math:`\rho_0N` rigid, massless links serially connected by spherical joints, with the first link connected to a fixed point placed at the origin of the ambient space :math:`\rho_0\mathbb{R}^3`. We neglect friction and interactions among the pendulums. 
 
 The modeling part comes from \cite{lee2018} and we omit details. We denote by :math:`\rho_0q_i\in S^2` the configuration vector of the :math:`\rho_0i-`th mass, :math:`\rho_0m_i`, of the chain. Following \cite{lee2018}, we express the Euler–Lagrange equations for our system in terms of the configuration variables :math:`\rho_0(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}`, and their angular velocities :math:`\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}`, defined be the following kinematic equations:
