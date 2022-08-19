@@ -1,5 +1,11 @@
 function A = expSE3(input)
 
+% exponential map on the SE3 group
+%
+% :param input: 
+%
+% :returns: 
+
     %we take as an input the element of SE(3) representable by [hat(u),v]
     %so u and v are column 3-vectors
     
