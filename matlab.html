@@ -81,6 +81,143 @@ using the <a class="reference external" href="https://github.com/sphinx-contrib/
 </dl>
 </dd></dl>
 
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.expRodrigues">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expRodrigues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.expRodrigues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponantial map for SO3</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.expSE3">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map on the SE3 group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.exponentialSE3N">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">exponentialSE3N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sigma</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.exponentialSE3N" title="Permalink to this definition">¶</a></dt>
+<dd><p>exponential map on SE(3)^N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sigma</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.actionSE3">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">B</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
+<dd><p>action on the SE3 group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>B</strong> – element of the Lie group SE3</p></li>
+<li><p><strong>input</strong> – element of the Lie algebra se3</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>element of the Lie algebra se3</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.actionSE3N">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">B</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3N" title="Permalink to this definition">¶</a></dt>
+<dd><p>action on SE(3)^N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>B</strong> – element of the Lie group SE3</p></li>
+<li><p><strong>input</strong> – element of the Lie algebra se3</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>element of se(3)^N</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.dexpinvSE3">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sigma</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.dexpinvSE3" title="Permalink to this definition">¶</a></dt>
+<dd><p>dexpinv map on the SE3 group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sigma</strong> – </p></li>
+<li><p><strong>input</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.dexpinvSE3N">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sigma</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.dexpinvSE3N" title="Permalink to this definition">¶</a></dt>
+<dd><p>dexpinv map on SE(3)^N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sigma</strong> – </p></li>
+<li><p><strong>input</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.fManiToAlgebra">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">fManiToAlgebra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">w</span></em>, <em class="sig-param"><span class="pre">L</span></em>, <em class="sig-param"><span class="pre">m</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.fManiToAlgebra" title="Permalink to this definition">¶</a></dt>
+<dd><p>RHS of the system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>q</strong> – </p></li>
+<li><p><strong>w</strong> – </p></li>
+<li><p><strong>L</strong> – </p></li>
+<li><p><strong>m</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>vector field of the system</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.initializeStat">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">initializeStat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">N</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.initializeStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialization of the system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>N</strong> – number of connected pendulums</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
