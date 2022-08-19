@@ -11,9 +11,9 @@ We describe here the specific problem of a chain of :math:`N` connected 3D pendu
 Equations of motion
 -------------------
 
-Let us consider a  chain of :math:`N` pendulums subject to constant gravity :math:`\rho_0g`. The system is modeled by :math:`\rho_0N` rigid, massless links serially connected by spherical joints, with the first link connected to a fixed point placed at the origin of the ambient space :math:`\rho_0\mathbb{R}^3`. We neglect friction and interactions among the pendulums. 
+Let us consider a  chain of :math:`N` pendulums subject to constant gravity :math:`g`. The system is modeled by :math:`N` rigid, massless links serially connected by spherical joints, with the first link connected to a fixed point placed at the origin of the ambient space :math:`\mathbb{R}^3`. We neglect friction and interactions among the pendulums. 
 
-The modeling part comes from \cite{lee2018} and we omit details. We denote by :math:`\rho_0q_i\in S^2` the configuration vector of the :math:`\rho_0i-`th mass, :math:`\rho_0m_i`, of the chain. Following \cite{lee2018}, we express the Euler–Lagrange equations for our system in terms of the configuration variables :math:`\rho_0(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}`, and their angular velocities :math:`\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}`, defined be the following kinematic equations:
+The modeling part comes from \cite{lee2018} and we omit details. We denote by :math:`q_i\in S^2` the configuration vector of the :math:`i-`th mass, :math:`m_i`, of the chain. Following \cite{lee2018}, we express the Euler–Lagrange equations for our system in terms of the configuration variables :math:`(q_1,\dots,q_N)\in (S^2)^N\subset\mathbb{R}^{3N}`, and their angular velocities :math:`\rho_0(\omega_1,...,\omega_N)\in T_{q_1}S^2\times ... \times T_{q_N}S^2\subset\mathbb{R}^{3N}`, defined be the following kinematic equations:
 
 .. math::
     :name: eq:1 
@@ -51,7 +51,7 @@ and
         M_{ij} =\Big(\sum_{k={\text{max}}\{i,j\}}^N m_k\Big)L_iL_j I_3\in\mathbb{R}^{3\times 3}.
     \end{align}
     
-Equations :ref:`Equation (1) <eq:1>`-:ref:`Equation (2) <eq:2>` define the dynamics of the N-fold pendulum, and hence a vector field :math:`\rho_0F\in\mathfrak{X}((TS^2)^N)`. We now find a function :math:`\rho_0f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N` such that
+Equations :ref:`Equation (1) <eq:1>`-:ref:`Equation (2) <eq:2>` define the dynamics of the N-fold pendulum, and hence a vector field :math:`F\in\mathfrak{X}((TS^2)^N)`. We now find a function :math:`f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N` such that
 
 .. math::
 
@@ -59,9 +59,9 @@ Equations :ref:`Equation (1) <eq:1>`-:ref:`Equation (2) <eq:2>` define the dynam
         \infgen(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N,
     \end{align}
     
-where :math:`\rho_0\psi` is defined as in subsection \ref{286subsec:cartesian}.
+where :math:`\psi` is defined as in subsection \ref{286subsec:cartesian}.
 
-Since :math:`\rho_0R(q)` defines a linear invertible map (see \cite{celledoni2021})
+Since :math:`R(q)` defines a linear invertible map (see \cite{celledoni2021})
 
 .. math::
 
@@ -83,8 +83,8 @@ we can rewrite the ODEs for the angular velocities as follows:
         \end{bmatrix}.
    \end{align}
    
-In equation :ref:`Equation (3) <eq:3>` the :math:`\rho_0r_i`s are defined as in :ref:`Equation (2) <eq:2>`,
-and :math:`\rho_0a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`\rho_0a_i(q,\omega):=q_i\times h_i(q,\omega)`. Thus, the map :math:`\rho_0f` is given by
+In equation :ref:`Equation (3) <eq:3>` the :math:`r_i`s are defined as in :ref:`Equation (2) <eq:2>`,
+and :math:`a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`a_i(q,\omega):=q_i\times h_i(q,\omega)`. Thus, the map :math:`f` is given by
 
 .. math::
 
