@@ -1,7 +1,10 @@
-
-% Exponantial map for SO3
 function [ExpSO3_] = expRodrigues(x)
-        
+% Exponantial map for SO3   
+%
+% :param x: 
+%
+% :returns: 
+
     a  = norm(x,2);
     
     if a == 0
