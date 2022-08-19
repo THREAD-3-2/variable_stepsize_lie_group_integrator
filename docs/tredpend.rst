@@ -27,6 +27,7 @@ The Euler–Lagrange equations of the system can be written as
 
 .. math::
     :name: eq:2
+    
     \begin{align}
         R(q)\dot{\omega} = \left[\sum_{\substack{j=1\\ j\neq i}}^N M_{ij}|\omega_j|^2\hat{q}_i q_j - \Big(\sum_{j=i}^N m_j\Big)gL_i \hat{q}_i e_3 \right]_{i=1,...,N} = \begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\in\mathbb{R}^{3N},
     \end{align}
