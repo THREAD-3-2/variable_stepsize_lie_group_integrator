@@ -40,3 +40,11 @@ src
 
 .. mat:autofunction:: initializeStat
 
+.. mat:autofunction:: hat
+
+.. mat:autofunction:: assembleF
+
+.. mat:autofunction:: assembleM
+
+.. mat:autofunction:: assembleR
+
