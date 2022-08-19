@@ -1,14 +1,17 @@
 function F = fManiToAlgebra(q,w,L,m)
+% RHS of the system
+%
+% :param q: 
+% :param w: 
+% :param L: 
+% :param m: 
+%
+% :returns: vector field of the system
 
-%     R = assembleR(q,L,m); %Creates the matrix R multiplying w'
-%     
-%     Func = assembleF(q,w,m,L); %Creates the right hand site Rw' = Func
-    
     vec = @(v,i) getVec(v,i);
     
-    N = length(m); %Number clcof connected pendulums
+    N = length(m); % Number of connected pendulums
     
-%     V = R\Func; %Finds the right hand side of the equation w' = V
     z = [q;w];
     V = FuncW(z,L,m);
     A = @(i) hat(vec(q,i))*vec(V,i);
