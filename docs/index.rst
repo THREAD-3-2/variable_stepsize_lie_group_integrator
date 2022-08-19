@@ -15,7 +15,7 @@ Contents
 
 .. toctree::
    installation
-   ibvp
+   tredpend
    vi
    matlab
    :maxdepth: 2
