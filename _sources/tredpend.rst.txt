@@ -53,7 +53,7 @@ and
         M_{ij} =\Big(\sum_{k={\text{max}}\{i,j\}}^N m_k\Big)L_iL_j I_3\in\mathbb{R}^{3\times 3}.
     \end{align}
     
-Equations :ref:`(1) <eq:1>`-:ref:`(2) <eq:2>` define the dynamics of the N-fold pendulum, and hence a vector field :math:`F\in\mathfrak{X}((TS^2)^N)`. We now find a function :math:`f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N` such that
+Equations :ref:`(1) <eq:1>` - :ref:`(2) <eq:2>` define the dynamics of the N-fold pendulum, and hence a vector field :math:`F\in\mathfrak{X}((TS^2)^N)`. We now find a function :math:`f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N` such that
 
 .. math::
 
@@ -80,7 +80,7 @@ we can rewrite the ODEs for the angular velocities as follows:
         \dot{\omega}= A_{q}^{-1}\left(\begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\right) =\begin{bmatrix} h_1(q,\omega) \\ \vdots \\ h_N(q,\omega)\end{bmatrix} = \begin{bmatrix} a_1(q,\omega)\times q_1 \\ \vdots \\ a_N(q,\omega)\times q_N \end{bmatrix}.
     \end{align}
    
-In equation :ref:`(3) <eq:3>` the :math:`r_i-s` are defined as in :ref:`Equation (2) <eq:2>`,
+In equation :ref:`(3) <eq:3>` the :math:`r_i-s` are defined as in :ref:`(2) <eq:2>`,
 and :math:`a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`a_i(q,\omega):=q_i\times h_i(q,\omega)`. Thus, the map :math:`f` is given by
 
 .. math::
