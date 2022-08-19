@@ -7,6 +7,7 @@ The N-fold 3D pendulum
 We describe here the specific problem of a chain of :math:`N` connected 3D pendulums, whose dynamics evolves on :math:`(TS^2)^N`.
 The dynamics of this mechanical system is described in terms of a Lie group :math:`G` acting transitively on the phase space :math:`\mathcal{M}`. 
 The equations of motion are presented in terms of the infinitesimal generator of the transitive action.
+
 .. _eom:
 
 Equations of motion
@@ -59,10 +60,8 @@ Equations :ref:`(1) <eq:1>` and :ref:`(2) <eq:2>` define the dynamics of the N-f
 .. math::
 
     \begin{align}
-        \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N,
+        \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N.
     \end{align}
-    
-where :math:`\Psi` is defined as in subsection \ref{286subsec:cartesian}.
 
 Since :math:`R(q)` defines a linear invertible map (see `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
 
