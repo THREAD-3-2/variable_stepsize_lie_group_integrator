@@ -22,26 +22,21 @@ src
 
 .. mat:autofunction:: src.RKMK45
 
-.. mat:autofunction:: expRodrigues.m
+.. mat:autofunction:: expRodrigues
 
-.. mat:autofunction:: expSE3.m
+.. mat:autofunction:: expSE3
 
-.. mat:autofunction:: exponentialSE3N.m
+.. mat:autofunction:: exponentialSE3N
 
-.. mat:autofunction:: actionSE3.m
+.. mat:autofunction:: actionSE3
 
-.. mat:autofunction:: actionSE3N.m
+.. mat:autofunction:: actionSE3N
 
-.. mat:autofunction:: dexpinvSE3.m
+.. mat:autofunction:: dexpinvSE3
 
-.. mat:autofunction:: dexpinvSE3N.m
+.. mat:autofunction:: dexpinvSE3N
 
-.. mat:autofunction:: fManiToAlgebra.m
+.. mat:autofunction:: fManiToAlgebra
 
-.. mat:autofunction:: initializeStat.m
-
-.. mat:autofunction::
-
-.. mat:autofunction::
-
+.. mat:autofunction:: initializeStat
 
