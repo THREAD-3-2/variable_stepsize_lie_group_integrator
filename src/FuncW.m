@@ -1,4 +1,11 @@
 function vec = FuncW(z,L,m)
+% -------
+%
+% :param z: 
+% :param L: 
+% :param m: 
+%
+% :returns: 
 
     %This function is used to integrate with ODE45, so the input z is of
     %the form z = [q1,q2,...,qP,w1,w2,...,wP]
