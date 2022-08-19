@@ -15,8 +15,8 @@ Contents
 
 .. toctree::
    installation
-   tredpend
    RKMK_var_step
+   tredpend
    matlab
    :maxdepth: 2
 
