@@ -1,4 +1,14 @@
+% main function
+%
 %This code contains the numerical experiments with the step adaptive RKMK method based on Dormand-Prince pair (5,4)
+%
+% Ref.: E. Celledoni, E. Çokaj, A. Leone, D. Murari, B. Owren.
+% "Dynamics of the N-fold Pendulum in the framework of Lie Group Integrators", arXiv.
+%
+% Ref.: E. Celledoni, E. Çokaj, A. Leone, D. Murari, B. Owren.
+% "Lie group integrators for mechanical systems",
+% International Journal of Computer Mathematics, 99:1, 58-88.
+
 
 clc;
 clear all;
@@ -6,22 +16,22 @@ close all;
 
 %% Setting the parameters 
 
-Prange = 2 : 2 : 20; 
+Prange = 2 : 2 : 20;    %number of connected pendulums
 accVar = zeros(length(Prange), 1);
 accConst = accVar;
 index = 1;
 tol = 1e - 6;
-Lref = 5;
+Lref = 5;               % length of the entire chain of pendulum
 steps = zeros(length(Prange), 1);
 
 for P = Prange
     
     L = rand(P, 1) + 0.5; % Set random lengths
     m = rand(P, 1) + 0.5; % Set random masses
-    L = 0 * L + Lref / P; 
-    m = 0 * m + 1;
+    L = 0 * L + Lref / P; % size of each pendulum
+    m = 0 * m + 1;        % mass of the pendulum
  
-    [q0, w0, z0] = initializeStat(P);
+    [q0, w0, z0] = initializeStat(P);  % initial positions and angular velocities of the N-fold pendulum
 
     t0 = 0;         % initial time
     T = 3;          % final time
