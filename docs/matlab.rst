@@ -16,9 +16,15 @@ src
     
 .. mat:autoscript:: src.main
 
+src/integrators
+===============
+
 .. mat:autofunction:: src.integrators.RKMK5
 
 .. mat:autofunction:: src.integrators.RKMK45
+
+src/Lie_group_functions
+=======================
 
 .. mat:autofunction:: Lie_group_functions.expRodrigues
 
