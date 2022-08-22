@@ -3,7 +3,7 @@ function [q0, w0, z0] = initializeStat(N)
 %
 % :param N: number of connected pendulums
 %
-% :returns: 
+% :returns: initial positions for q and w of the N-fold pendulum
 
     z0 = zeros(6 * N, 1);
     qref = [1; 0; 0];
