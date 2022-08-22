@@ -191,13 +191,16 @@ with u and v 3x1 column vectors</p>
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.Lie_group_functions.dexpinvSE3N">
 <span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3N</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sigma</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.dexpinvSE3N" title="Permalink to this definition">¶</a></dt>
-<dd><p>dexpinv map on SE(3)^N</p>
+<dd><p>Inverse of the derivative of the exponential map on SE(3)^N</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sigma</strong> – </p></li>
-<li><p><strong>input</strong> – </p></li>
+<li><p><strong>sigma</strong> – element of se(3)^N</p></li>
+<li><p><strong>input</strong> – element of se(3)^N</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>inverse of dexp_sigma(input)</p>
 </dd>
 </dl>
 </dd></dl>
