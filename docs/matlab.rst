@@ -6,7 +6,8 @@
 
 This MATLAB code is documented with Sphinx
 using the `matlabdomain extension <https://github.com/sphinx-contrib/matlabdomain/blob/master/README.rst>`_.
-
+ 
+ 
 src
 ========
 
@@ -16,12 +17,14 @@ src
     
 .. mat:autoscript:: src.main
 
+
 src/integrators
 ===============
 
 .. mat:autofunction:: src.integrators.RKMK5
 
 .. mat:autofunction:: src.integrators.RKMK45
+
 
 src/Lie_group_functions
 =======================
