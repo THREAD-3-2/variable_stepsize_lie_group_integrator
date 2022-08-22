@@ -1,10 +1,12 @@
-function sol = RKMK5(vecField, action, p, h)
+function sol = RKMK5(vecField, exponentialSE3N, action, p, h, sigma0)
 % Runge-Kutta-Munthe-Kaas time integrator order 5
 %
 % :param vecField: right hand side of the ODE
+% :param exponentialSE3N: exponential map from se(3)^N to SE(3)^N
 % :param action: Lie group action
 % :param p: solution at time t_n
 % :param h: time step size
+% :param sigma0: initial value of the curve sigma on se(3)^N
 %
 % :returns: solution at time t_(n+1)
 
