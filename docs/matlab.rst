@@ -59,3 +59,7 @@ src/Lie_group_functions
 
 .. mat:autofunction:: src.Lie_group_functions.FuncW
 
+.. mat:autofunction:: src.Lie_group_functions.extractq
+
+.. mat:autofunction:: src.Lie_group_functions.extractw
+
