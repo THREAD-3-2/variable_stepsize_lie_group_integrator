@@ -1,11 +1,10 @@
 function R = assembleR(q, L, m)
-% assembleR
 %
-% :param q:
-% :param L:
-% :param m:
+% :param q: position vector [q1, ..., qN] in S^2
+% :param L: length of the pendulum
+% :param m: mass of the pendulum
 %
-% :returns: 
+% :returns: symmetric block matrix used in the equations for the angular velocities
 
 
     N = floor(length(q) / 3); % Number of connected pendulums
