@@ -1,14 +1,12 @@
 function sol = RKMK5(vecField, action, p, h)
-% RKMK5
+% Runge-Kutta-Munthe-Kaas time integrator order 5
 %
-% :param vecField: 
-% :param action: 
-% :param p:
-% :param h:
-
-% :returns: element of the Lie algebra se3
-
-    % Computes one time step update with RKMK of order 4
+% :param vecField: right hand side of the ODE
+% :param action: Lie group action
+% :param p: solution at time t_n
+% :param h: time step size
+%
+% :returns: solution at time t_(n+1)
 
     sigma0 = zeros(length(p), 1);
     k1 = vecField(sigma0, p);
