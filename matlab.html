@@ -255,17 +255,18 @@ with u and v 3x1 column vectors</p>
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.Lie_group_functions.assembleF">
 <span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">assembleF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">w</span></em>, <em class="sig-param"><span class="pre">m</span></em>, <em class="sig-param"><span class="pre">L</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.assembleF" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>This function defines the right hand side, precisely we need it to define the equations for the angular velocities, which now becomes R(q)w’ = F, and here we assemble this F vector.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>q</strong> – </p></li>
-<li><p><strong>w</strong> – </p></li>
-<li><p><strong>m</strong> – </p></li>
-<li><p><strong>L</strong> – </p></li>
+<li><p><strong>q</strong> – position vector [q1, …, qN] in S^2</p></li>
+<li><p><strong>w</strong> – angular velocities vector [w1, …, wN] in T_{qi}S^2</p></li>
+<li><p><strong>L</strong> – length of the pendulum</p></li>
+<li><p><strong>m</strong> – mass of the pendulum</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
+<dd class="field-even"><p>equations for the angular velocities of the form R(q)w’ = F</p>
 </dd>
 </dl>
 </dd></dl>
