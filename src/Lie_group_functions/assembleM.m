@@ -1,11 +1,10 @@
 function M = assembleM(q, L, m)
-% assembleM
 %
-% :param q:
-% :param L:
-% :param m:
+% :param q: position vector [q1, ..., qN] in S^2
+% :param L: length of the pendulum
+% :param m: mass of the pendulum
 %
-% :returns: 
+% :returns: inertia mass matrix of the system
 
     N = floor(length(q) / 3); % Number of connected pendulums
     
