@@ -63,7 +63,7 @@ Equations :ref:`(1) <eq:1>` and :ref:`(2) <eq:2>` define the dynamics of the N-f
         \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N.
     \end{align}
 
-Since :math:`R(q)` defines a linear invertible map (see `(Elena Celledoni, Ergys Çokaj, Andrea Leone, Davide Murari & and Brynjulf Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
+Since :math:`R(q)` defines a linear invertible map (see `(Celledoni, Çokaj, Leone, Murari and Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
 
 .. math::
 
