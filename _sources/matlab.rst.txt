@@ -55,3 +55,7 @@ src/Lie_group_functions
 
 .. mat:autofunction:: src.Lie_group_functions.assembleR
 
+.. mat:autofunction:: src.Lie_group_functions.FuncQ
+
+.. mat:autofunction:: src.Lie_group_functions.FuncW
+

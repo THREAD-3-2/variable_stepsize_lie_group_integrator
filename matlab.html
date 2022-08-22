@@ -304,6 +304,31 @@ with u and v 3x1 column vectors</p>
 </dl>
 </dd></dl>
 
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.FuncQ">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">FuncQ</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.FuncQ" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to integrate with ODE45, so the input z is of
+the form z = [q1,q2,…,qP,w1,w2,…,wP]
+Builds the part of the vector field for the dot{q}_i, so hat(w_i)*q_i</p>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.FuncW">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">FuncW</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">z</span></em>, <em class="sig-param"><span class="pre">L</span></em>, <em class="sig-param"><span class="pre">m</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.FuncW" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – </p></li>
+<li><p><strong>L</strong> – </p></li>
+<li><p><strong>m</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
