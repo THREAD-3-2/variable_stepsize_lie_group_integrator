@@ -14,35 +14,35 @@ src
 
 :mod:`src` module contains the following source code files:
     
-.. mat:autoscript:: src.main_const_vs_var_stepsize_comparison
+.. mat:autoscript:: src.main
 
-.. mat:autofunction:: src.RKMK5
+.. mat:autofunction:: src.integrators.RKMK5
 
-.. mat:autofunction:: src.RKMK45
+.. mat:autofunction:: src.integrators.RKMK45
 
-.. mat:autofunction:: expRodrigues
+.. mat:autofunction:: Lie_group_functions.expRodrigues
 
-.. mat:autofunction:: expSE3
+.. mat:autofunction:: Lie_group_functions.expSE3
 
-.. mat:autofunction:: exponentialSE3N
+.. mat:autofunction:: Lie_group_functions.exponentialSE3N
 
-.. mat:autofunction:: actionSE3
+.. mat:autofunction:: Lie_group_functions.actionSE3
 
-.. mat:autofunction:: actionSE3N
+.. mat:autofunction:: Lie_group_functions.actionSE3N
 
-.. mat:autofunction:: dexpinvSE3
+.. mat:autofunction:: Lie_group_functions.dexpinvSE3
 
-.. mat:autofunction:: dexpinvSE3N
+.. mat:autofunction:: Lie_group_functions.dexpinvSE3N
 
-.. mat:autofunction:: fManiToAlgebra
+.. mat:autofunction:: Lie_group_functions.fManiToAlgebra
 
-.. mat:autofunction:: initializeStat
+.. mat:autofunction:: Lie_group_functions.initializeStat
 
-.. mat:autofunction:: hat
+.. mat:autofunction:: Lie_group_functions.hat
 
-.. mat:autofunction:: assembleF
+.. mat:autofunction:: Lie_group_functions.assembleF
 
-.. mat:autofunction:: assembleM
+.. mat:autofunction:: Lie_group_functions.assembleM
 
-.. mat:autofunction:: assembleR
+.. mat:autofunction:: Lie_group_functions.assembleR
 

@@ -41,84 +41,44 @@ using the <a class="reference external" href="https://github.com/sphinx-contrib/
 <span id="src"></span><h2>src<a class="headerlink" href="#module-src" title="Permalink to this heading">¶</a></h2>
 <p><code class="xref py py-mod docutils literal notranslate"><span class="pre">src</span></code> module contains the following source code files:</p>
 <dl class="mat script">
-<dt class="sig sig-object mat" id="src.main_const_vs_var_stepsize_comparison">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main_const_vs_var_stepsize_comparison</span></span><a class="headerlink" href="#src.main_const_vs_var_stepsize_comparison" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object mat" id="src.main">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">main</span></span><a class="headerlink" href="#src.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>This code contains the numerical experiments with the step adaptive RKMK method based on Dormand-Prince pair (5,4)</p>
+</dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="src.RKMK5">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">RKMK5</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.RKMK5" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object mat" id="src.integrators.RKMK5">
+<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK5" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vecField</strong> – </p></li>
+<li><p><strong>action</strong> – </p></li>
+<li><p><strong>p</strong> – </p></li>
+<li><p><strong>h</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="src.RKMK45">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">RKMK45</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.RKMK45" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.expRodrigues">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expRodrigues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.expRodrigues" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.expSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">expSE3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.expSE3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.exponentialSE3N">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">exponentialSE3N</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.exponentialSE3N" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.actionSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.actionSE3N">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">actionSE3N</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.actionSE3N" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.dexpinvSE3">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.dexpinvSE3" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.dexpinvSE3N">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3N</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.dexpinvSE3N" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.fManiToAlgebra">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">fManiToAlgebra</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.fManiToAlgebra" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.initializeStat">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">initializeStat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.initializeStat" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.hat">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">hat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.hat" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.assembleF">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">assembleF</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.assembleF" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.assembleM">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">assembleM</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.assembleM" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.assembleR">
-<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">assembleR</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.assembleR" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object mat" id="src.integrators.RKMK45">
+<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK45</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK45" title="Permalink to this definition">¶</a></dt>
+<dd><p>RKMK5(4)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vecField</strong> – </p></li>
+<li><p><strong>action</strong> – </p></li>
+<li><p><strong>p</strong> – </p></li>
+<li><p><strong>h</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 </section>
