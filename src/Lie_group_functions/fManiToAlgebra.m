@@ -3,8 +3,8 @@ function F = fManiToAlgebra(q, w, L, m)
 %
 % :param q: position vector [q1, ..., qN] in S^2
 % :param w: angular velocities vector [w1, ..., wN] in T_{qi}S^2
-% :param L: 
-% :param m: 
+% :param L: length of the pendulum
+% :param m: mass of the pendulum
 %
 % :returns: vector field of the system
 
