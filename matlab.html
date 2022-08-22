@@ -161,13 +161,16 @@ with u and v 3x1 column vectors</p>
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.dexpinvSE3">
 <span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">dexpinvSE3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sigma</span></em>, <em class="sig-param"><span class="pre">input</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.dexpinvSE3" title="Permalink to this definition">¶</a></dt>
-<dd><p>dexpinv map on the SE3 group</p>
+<dd><p>Inverse of the derivative of the exponential map on SE(3)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sigma</strong> – </p></li>
-<li><p><strong>input</strong> – </p></li>
+<li><p><strong>sigma</strong> – element in the Lie algebra se(3), represented as a 6x1 vector</p></li>
+<li><p><strong>input</strong> – element in the Lie algebra se(3), represented as a 6x1 vector</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>inverse of dexp_sigma(input) as 6x1 vector</p>
 </dd>
 </dl>
 </dd></dl>
