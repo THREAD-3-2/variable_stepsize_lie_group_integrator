@@ -225,34 +225,6 @@ with u and v 3x1 column vectors</p>
 </dd></dl>
 
 <dl class="mat function">
-<dt class="sig sig-object mat" id="src.Lie_group_functions.initializeStat">
-<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">initializeStat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">N</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.initializeStat" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialization of the system</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>N</strong> – number of connected pendulums</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>initial positions for q and w of the N-fold pendulum</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.Lie_group_functions.hat">
-<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">hat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.hat" title="Permalink to this definition">¶</a></dt>
-<dd><p>It returns the skew symmetric matrix A associated to the vector v</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> – vector with 3 components</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie algebra so(3) (skew symmetric 3x3 matrix)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
 <dt class="sig sig-object mat" id="src.Lie_group_functions.assembleF">
 <span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">assembleF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">q</span></em>, <em class="sig-param"><span class="pre">w</span></em>, <em class="sig-param"><span class="pre">m</span></em>, <em class="sig-param"><span class="pre">L</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.assembleF" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function defines the right hand side, precisely we need it to define the equations for the angular velocities, which now becomes R(q)w’ = F, and here we assemble this F vector.</p>
@@ -361,6 +333,34 @@ with u and v 3x1 column vectors</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the w components of v, w = [w1, w2, …, wN]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.hat">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">hat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.hat" title="Permalink to this definition">¶</a></dt>
+<dd><p>It returns the skew symmetric matrix A associated to the vector v</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>v</strong> – vector with 3 components</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>element of the Lie algebra so(3) (skew symmetric 3x3 matrix)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.initializeStat">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">initializeStat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">N</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.initializeStat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialization of the system</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>N</strong> – number of connected pendulums</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>initial positions for q and w of the N-fold pendulum</p>
 </dd>
 </dl>
 </dd></dl>

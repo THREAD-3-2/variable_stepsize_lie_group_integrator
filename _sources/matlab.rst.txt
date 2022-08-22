@@ -45,10 +45,6 @@ src/Lie_group_functions
 
 .. mat:autofunction:: src.Lie_group_functions.fManiToAlgebra
 
-.. mat:autofunction:: src.Lie_group_functions.initializeStat
-
-.. mat:autofunction:: src.Lie_group_functions.hat
-
 .. mat:autofunction:: src.Lie_group_functions.assembleF
 
 .. mat:autofunction:: src.Lie_group_functions.assembleM
@@ -63,3 +59,6 @@ src/Lie_group_functions
 
 .. mat:autofunction:: src.Lie_group_functions.extractw
 
+.. mat:autofunction:: src.Lie_group_functions.hat
+
+.. mat:autofunction:: src.Lie_group_functions.initializeStat
