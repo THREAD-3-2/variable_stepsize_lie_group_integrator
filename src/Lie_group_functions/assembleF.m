@@ -1,16 +1,12 @@
 function F = assembleF(q, w, m, L)
-% assembleF
+% This function defines the right hand side, precisely we need it to define the equations for the angular velocities, which now becomes R(q)w' = F, and here we assemble this F vector.
 %
-% :param q:
-% :param w:
-% :param m:
-% :param L:
+% :param q: position vector [q1, ..., qN] in S^2
+% :param w: angular velocities vector [w1, ..., wN] in T_{qi}S^2
+% :param L: length of the pendulum
+% :param m: mass of the pendulum
 %
-% :returns: 
-
-
-    %% This function defines the right hand side, precisely we need it to define the equations for
-    %% the angular velocities, which now becomes R(q)w' = F, and here we assemble this F vector.
+% :returns: equations for the angular velocities of the form R(q)w' = F
 
     N = length(m); % Number of connected pendulums
     f = cell(1, N);
