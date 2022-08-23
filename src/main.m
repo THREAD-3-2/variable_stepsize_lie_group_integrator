@@ -20,7 +20,7 @@ Prange = 2 : 2 : 20;    %number of connected pendulums
 accVar = zeros(length(Prange), 1);
 accConst = accVar;
 index = 1;
-tol = 1e - 6;
+tol = 1e-6;
 Lref = 5;               % length of the entire chain of pendulum
 steps = zeros(length(Prange), 1);
 
@@ -124,7 +124,7 @@ for P = Prange
 
     z0Ref = [q0; w0];
     odeFunc = @(t, z) [FuncQ(z); FuncW(z, L, m)];
-    options = odeset('AbsTol', 1e - 12, 'RelTol',1e - 6);
+    options = odeset('AbsTol', 1e-12, 'RelTol',1e-6);
     [timeSol, zC] = ode45(odeFunc, [0 T], z0Ref, options);
     zC = zC';
     zC = reorder(zC);
