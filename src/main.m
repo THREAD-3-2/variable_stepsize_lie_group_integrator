@@ -17,6 +17,7 @@ close all;
 
 % add paths
 addpath('Lie_group_functions'); addpath('integrators');
+addpath('equations_of_motion'); addpath('helpful_functions');
 
 %% Setting the parameters 
 Prange = 2 : 2 : 20;    %number of connected pendulums
