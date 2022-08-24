@@ -1,4 +1,12 @@
 function [err, TT, Y] = variableStepComparison(vecField, action, z0, T, tol) 
+%
+% :param vecField: right hand side of the ODE
+% :param action: Lie group action
+% :param z0: initial value
+% :param T: time instant
+% :param tol: tolerance
+%
+% :returns: local error, time instant and new solution
 
     chunk = 500;
     Z = zeros(length(z0), chunk);
@@ -15,7 +23,7 @@ function [err, TT, Y] = variableStepComparison(vecField, action, z0, T, tol)
     while TT(i) < T - 5 * eps
         err = tol + 1;
         while err > tol    
-            [z, err] = variableRKMK45(vecField, action, Y(:, i), h);
+            [z, err] = RKMK45(vecField, action, Y(:, i), h);
             accepted = (err < tol);
             if accepted
                 i = i + 1;
