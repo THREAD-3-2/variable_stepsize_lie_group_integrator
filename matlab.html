@@ -59,42 +59,24 @@ International Journal of Computer Mathematics, 99:1, 58-88.</p>
 <h2>src/integrators<a class="headerlink" href="#src-integrators" title="Permalink to this heading">¶</a></h2>
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.integrators.RKMK5">
-<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">exponentialSE3N</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">sigma0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK5" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runge-Kutta-Munthe-Kaas time integrator order 5</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vecField</strong> – right hand side of the ODE</p></li>
-<li><p><strong>exponentialSE3N</strong> – exponential map from se(3)^N to SE(3)^N</p></li>
-<li><p><strong>action</strong> – Lie group action</p></li>
-<li><p><strong>p</strong> – solution at time t_n</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-<li><p><strong>sigma0</strong> – initial value of the curve sigma on se(3)^N</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>solution at time t_(n+1)</p>
-</dd>
-</dl>
-</dd></dl>
+<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="mat function">
 <dt class="sig sig-object mat" id="src.integrators.RKMK45">
-<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK45</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">exponentialSE3N</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em>, <em class="sig-param"><span class="pre">sigma0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK45" title="Permalink to this definition">¶</a></dt>
-<dd><p>Runge-Kutta-Munthe-Kaas pair (5,4) based on the Dormand-Prince method DOPRI5(4)</p>
+<span class="sig-prename descclassname"><span class="pre">src.integrators.</span></span><span class="sig-name descname"><span class="pre">RKMK45</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">p</span></em>, <em class="sig-param"><span class="pre">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.integrators.RKMK45" title="Permalink to this definition">¶</a></dt>
+<dd><p>RKMK(5,4) scheme</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vecField</strong> – right hand side of the ODE</p></li>
-<li><p><strong>exponentialSE3N</strong> – exponential map from se(3)^N to SE(3)^N</p></li>
-<li><p><strong>action</strong> – Lie group action</p></li>
-<li><p><strong>p</strong> – solution at time t_n</p></li>
-<li><p><strong>h</strong> – time step size</p></li>
-<li><p><strong>sigma0</strong> – initial value of the curve sigma on se(3)^N</p></li>
+<li><p><strong>action</strong> – action on the Lie group</p></li>
+<li><p><strong>p</strong> – solution at time n</p></li>
+<li><p><strong>h</strong> – time stepsize</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>solution at time t_(n+1) and local error</p>
+<dd class="field-even"><p>numerical solution and local error</p>
 </dd>
 </dl>
 </dd></dl>
@@ -365,7 +347,7 @@ with u and v 3x1 column vectors</p>
 <dd><p>Initialization of the system</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>N</strong> – number of connected pendulums</p>
+<dd class="field-odd"><p><strong>N</strong> – number of connected pendula</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>initial positions for q and w of the N-fold pendulum</p>
