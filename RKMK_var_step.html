@@ -57,6 +57,12 @@ h_{n+1}^{\tilde{p}+1}+\mathcal{O}(h^{\tilde{p}+2})\)</span>. Aiming at <span cla
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is typically chosen between <span class="math notranslate nohighlight">\(0.8\)</span> and <span class="math notranslate nohighlight">\(0.9\)</span>.
 If <span class="math notranslate nohighlight">\(e_n&gt;\textrm{tol}\)</span>, the step is rejected. Hence, we can redo the step with the step size obtained by the same formula.</p>
+<p>In our <a class="reference external" href="https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/tree/main/src">code</a>, we perform the numerical experiments on <a class="reference external" href="https://thread-3-2.github.io/variable_stepsize_lie_group_integrator/tredpend.html">the N-fold 3D pendulum</a>, in which we compare the performance of constant and variable step size methods.
+We consider <a class="reference external" href="https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK45.m">the RKMK pair coming from Dormand–Prince method (DOPRI 5(4), which we denote by RKMK(5,4))</a>.
+We set a tolerance of <span class="math notranslate nohighlight">\(10^{-6}\)</span> and solve the system with the RKMK(5,4) scheme.
+Fixing the number of time steps required by RKMK(5,4), we repeat the experiment with <a class="reference external" href="https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK5.m">RKMK of order 5 (denoted by RKMK5)</a>.
+The comparison occurs at the final time <span class="math notranslate nohighlight">\(T=3\)</span> using the Euclidean norm of the ambient space <span class="math notranslate nohighlight">\(\mathbb{R}^{6N}\)</span>.
+The quality of the approximation is measured against a reference solution obtained with ODE45 from MATLAB with a strict tolerance.</p>
 </section>
 
 
