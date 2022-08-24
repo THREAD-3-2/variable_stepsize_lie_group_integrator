@@ -25,7 +25,7 @@ src/integrators
 
 .. mat:autofunction:: src.integrators.RKMK45
 
-.. mat:autofunction:: src.Lie_group_functions.variableStepComparison
+.. mat:autofunction:: src.integrators.variableStepComparison
 
 
 
