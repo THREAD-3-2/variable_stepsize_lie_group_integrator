@@ -25,6 +25,9 @@ src/integrators
 
 .. mat:autofunction:: src.integrators.RKMK45
 
+.. mat:autofunction:: src.Lie_group_functions.variableStepComparison
+
+
 
 src/Lie_group_functions
 =======================
@@ -43,30 +46,36 @@ src/Lie_group_functions
 
 .. mat:autofunction:: src.Lie_group_functions.dexpinvSE3N
 
-.. mat:autofunction:: src.Lie_group_functions.fManiToAlgebra
 
-.. mat:autofunction:: src.Lie_group_functions.assembleF
+src/equations_of_motion
+=======================
 
-.. mat:autofunction:: src.Lie_group_functions.assembleM
+.. mat:autofunction:: src.equations_of_motion.fManiToAlgebra
 
-.. mat:autofunction:: src.Lie_group_functions.assembleR
+.. mat:autofunction:: src.equations_of_motion.assembleF
 
-.. mat:autofunction:: src.Lie_group_functions.FuncQ
+.. mat:autofunction:: src.equations_of_motion.assembleM
 
-.. mat:autofunction:: src.Lie_group_functions.FuncW
+.. mat:autofunction:: src.equations_of_motion.assembleR
 
-.. mat:autofunction:: src.Lie_group_functions.extractq
+.. mat:autofunction:: src.equations_of_motion.FuncQ
 
-.. mat:autofunction:: src.Lie_group_functions.extractw
+.. mat:autofunction:: src.equations_of_motion.FuncW
 
-.. mat:autofunction:: src.Lie_group_functions.hat
+.. mat:autofunction:: src.equations_of_motion.initializeStat
 
-.. mat:autofunction:: src.Lie_group_functions.initializeStat
 
-.. mat:autofunction:: src.Lie_group_functions.getVec
+src/help_functions
+==================
 
-.. mat:autofunction:: src.Lie_group_functions.getBlock
+.. mat:autofunction:: src.help_functions.extractq
 
-.. mat:autofunction:: src.Lie_group_functions.reorder
+.. mat:autofunction:: src.help_functions.extractw
 
-.. mat:autofunction:: src.Lie_group_functions.variableStepComparison
+.. mat:autofunction:: src.help_functions.hat
+
+.. mat:autofunction:: src.help_functions.getVec
+
+.. mat:autofunction:: src.help_functions.getBlock
+
+.. mat:autofunction:: src.help_functions.reorder
