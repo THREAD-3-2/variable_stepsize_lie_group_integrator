@@ -355,6 +355,58 @@ with u and v 3x1 column vectors</p>
 </dl>
 </dd></dl>
 
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.getVec">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">getVec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vec</span></em>, <em class="sig-param"><span class="pre">i</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.getVec" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>vec</strong> – vector</p></li>
+<li><p><strong>i</strong> – index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>i-th term of the input vector</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.getBlock">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">getBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Mat</span></em>, <em class="sig-param"><span class="pre">i</span></em>, <em class="sig-param"><span class="pre">j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.getBlock" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Mat</strong> – a matrix</p></li>
+<li><p><strong>i</strong> – index</p></li>
+<li><p><strong>j</strong> – index</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>3x3 block in position i-j of a matrix Mat</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.reorder">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">reorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.reorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function reorders z to the format used in the Lie group integrators setting</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> – [q1,q2,..,qN,w1,w2,…,wN]</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>[q1,w1,q2,w2,…,qN,wN]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="mat function">
+<dt class="sig sig-object mat" id="src.Lie_group_functions.variableStepComparison">
+<span class="sig-prename descclassname"><span class="pre">src.Lie_group_functions.</span></span><span class="sig-name descname"><span class="pre">variableStepComparison</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vecField</span></em>, <em class="sig-param"><span class="pre">action</span></em>, <em class="sig-param"><span class="pre">z0</span></em>, <em class="sig-param"><span class="pre">T</span></em>, <em class="sig-param"><span class="pre">tol</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Lie_group_functions.variableStepComparison" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
 </section>
 
