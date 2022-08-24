@@ -336,97 +336,8 @@ with u and v 3x1 column vectors</p>
 </dd></dl>
 
 </section>
-<section id="src-help-functions">
-<h2>src/help_functions<a class="headerlink" href="#src-help-functions" title="Permalink to this heading">¶</a></h2>
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.extractq">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">extractq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.extractq" title="Permalink to this definition">¶</a></dt>
-<dd><p>extracts the q components from [q, w]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> – input vector v = [q1, w1, q2, w2, …, qN, wN]</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the q components of v, q = [q1,q2,…,qN]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.extractw">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">extractw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.extractw" title="Permalink to this definition">¶</a></dt>
-<dd><p>extracts the w components from [q, w]</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> – input vector v = [q1, w1, q2, w2, …, qN, wN]</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>the w components of v, w = [w1, w2, …, wN]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.hat">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">hat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">v</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.hat" title="Permalink to this definition">¶</a></dt>
-<dd><p>It returns the skew symmetric matrix A associated to the vector v</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>v</strong> – vector with 3 components</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>element of the Lie algebra so(3) (skew symmetric 3x3 matrix)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.getVec">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">getVec</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">vec</span></em>, <em class="sig-param"><span class="pre">i</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.getVec" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>vec</strong> – vector</p></li>
-<li><p><strong>i</strong> – index</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>i-th term of the input vector</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.getBlock">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">getBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">Mat</span></em>, <em class="sig-param"><span class="pre">i</span></em>, <em class="sig-param"><span class="pre">j</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.getBlock" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>Mat</strong> – a matrix</p></li>
-<li><p><strong>i</strong> – index</p></li>
-<li><p><strong>j</strong> – index</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>3x3 block in position i-j of a matrix Mat</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="mat function">
-<dt class="sig sig-object mat" id="src.help_functions.reorder">
-<span class="sig-prename descclassname"><span class="pre">src.help_functions.</span></span><span class="sig-name descname"><span class="pre">reorder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.help_functions.reorder" title="Permalink to this definition">¶</a></dt>
-<dd><p>This function reorders z to the format used in the Lie group integrators setting</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> – [q1,q2,..,qN,w1,w2,…,wN]</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>[q1,w1,q2,w2,…,qN,wN]</p>
-</dd>
-</dl>
-</dd></dl>
-
+<section id="src-helpful-functions">
+<h2>src/helpful_functions<a class="headerlink" href="#src-helpful-functions" title="Permalink to this heading">¶</a></h2>
 </section>
 </section>
 
@@ -455,7 +366,7 @@ with u and v 3x1 column vectors</p>
 <li class="toctree-l2"><a class="reference internal" href="#src-integrators">src/integrators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#src-lie-group-functions">src/Lie_group_functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#src-equations-of-motion">src/equations_of_motion</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#src-help-functions">src/help_functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#src-helpful-functions">src/helpful_functions</a></li>
 </ul>
 </li>
 </ul>

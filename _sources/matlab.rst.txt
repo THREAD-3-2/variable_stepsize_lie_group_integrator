@@ -65,17 +65,17 @@ src/equations_of_motion
 .. mat:autofunction:: src.equations_of_motion.initializeStat
 
 
-src/help_functions
-==================
+src/helpful_functions
+=====================
 
-.. mat:autofunction:: src.help_functions.extractq
+.. mat:autofunction:: src.helpful_functions.extractq
 
-.. mat:autofunction:: src.help_functions.extractw
+.. mat:autofunction:: src.helpful_functions.extractw
 
-.. mat:autofunction:: src.help_functions.hat
+.. mat:autofunction:: src.helpful_functions.hat
 
-.. mat:autofunction:: src.help_functions.getVec
+.. mat:autofunction:: src.helpful_functions.getVec
 
-.. mat:autofunction:: src.help_functions.getBlock
+.. mat:autofunction:: src.helpful_functions.getBlock
 
-.. mat:autofunction:: src.help_functions.reorder
+.. mat:autofunction:: src.helpful_functions.reorder
