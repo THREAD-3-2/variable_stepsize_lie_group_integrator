@@ -14,8 +14,11 @@ clc;
 clear all;
 close all;
 
-%% Setting the parameters 
 
+% add paths
+addpath('Lie_group_functions'); addpath('integrators');
+
+%% Setting the parameters 
 Prange = 2 : 2 : 20;    %number of connected pendulums
 accVar = zeros(length(Prange), 1);
 accConst = accVar;
