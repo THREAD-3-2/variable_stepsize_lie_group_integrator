@@ -62,3 +62,11 @@ src/Lie_group_functions
 .. mat:autofunction:: src.Lie_group_functions.hat
 
 .. mat:autofunction:: src.Lie_group_functions.initializeStat
+
+.. mat:autofunction:: src.Lie_group_functions.getVec
+
+.. mat:autofunction:: src.Lie_group_functions.getBlock
+
+.. mat:autofunction:: src.Lie_group_functions.reorder
+
+.. mat:autofunction:: src.Lie_group_functions.variableStepComparison
