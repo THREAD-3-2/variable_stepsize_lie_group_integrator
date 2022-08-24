@@ -83,7 +83,7 @@ for P = Prange
     while TT(i) < T - 5 * eps
         err = tol + 1;
         while err > tol 
-            [z, err] = variableRKMK45(vecField, action, Y(:, i), h);
+            [z, err] = RKMK45(vecField, action, Y(:, i), h);
             accepted = (err < tol);
             if accepted
                 i = i + 1;
