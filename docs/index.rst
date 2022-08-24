@@ -14,7 +14,6 @@ Contents
 ========
 
 .. toctree::
-   installation
    RKMK_var_step
    tredpend
    matlab
