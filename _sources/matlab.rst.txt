@@ -11,10 +11,12 @@ using the `matlabdomain extension <https://github.com/sphinx-contrib/matlabdomai
 src
 ========
 
+| 
+
 .. mat:automodule:: src
 
 :mod:`src` module contains the following source code files:
-    
+
 .. mat:autoscript:: src.main
 
 |
