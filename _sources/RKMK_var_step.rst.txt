@@ -40,5 +40,5 @@ In our `code <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrat
 We consider `the RKMK pair coming from Dormand–Prince method (DOPRI 5(4), which we denote by RKMK(5,4)) <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK45.m>`_.
 We set a tolerance of :math:`10^{-6}` and solve the system with the RKMK(5,4) scheme. 
 Fixing the number of time steps required by RKMK(5,4), we repeat the experiment with `RKMK of order 5 (denoted by RKMK5) <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK5.m>`_. 
-The comparison occurs at the final time :math:`T=3` using the Euclidean norm of the ambient space :math:`\mathbb{R}^{6N}`, where :math:`N` is the number of the connected pendulums. 
+The comparison occurs at the final time :math:`T=3` using the Euclidean norm of the ambient space :math:`\mathbb{R}^{6N}`, where :math:`N` is the number of the connected pendula. 
 The quality of the approximation is measured against a reference solution obtained with ODE45 from MATLAB with a strict tolerance.

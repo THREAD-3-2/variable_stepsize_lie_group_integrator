@@ -62,7 +62,7 @@ If <span class="math notranslate nohighlight">\(e_n&gt;\textrm{tol}\)</span>, th
 We consider <a class="reference external" href="https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK45.m">the RKMK pair coming from Dormand–Prince method (DOPRI 5(4), which we denote by RKMK(5,4))</a>.
 We set a tolerance of <span class="math notranslate nohighlight">\(10^{-6}\)</span> and solve the system with the RKMK(5,4) scheme.
 Fixing the number of time steps required by RKMK(5,4), we repeat the experiment with <a class="reference external" href="https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK5.m">RKMK of order 5 (denoted by RKMK5)</a>.
-The comparison occurs at the final time <span class="math notranslate nohighlight">\(T=3\)</span> using the Euclidean norm of the ambient space <span class="math notranslate nohighlight">\(\mathbb{R}^{6N}\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the number of the connected pendulums.
+The comparison occurs at the final time <span class="math notranslate nohighlight">\(T=3\)</span> using the Euclidean norm of the ambient space <span class="math notranslate nohighlight">\(\mathbb{R}^{6N}\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the number of the connected pendula.
 The quality of the approximation is measured against a reference solution obtained with ODE45 from MATLAB with a strict tolerance.</p>
 </section>
 
