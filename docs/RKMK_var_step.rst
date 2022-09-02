@@ -4,7 +4,8 @@
 Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size
 ==============================================================
 
-The underlying idea of RKMK methods is to express a vector field :math:`F\in\mathfrak{X}(\mathcal{M})` as :math:`F\vert_m = \Psi_*(f(m))\vert_m` , where :math:`\Psi_*` is the infinitesimal generator of :math:`\Psi`, a transitive action on :math:`\mathcal{M}`, and :math:`f:\mathcal{M}\rightarrow\mathfrak{g}`. This allows us to transform the problem from the manifold :math:`\mathcal{M}` to the Lie algebra :math:`\mathfrak{g}`, on which we can perform a time step integration. We then map the result back to :math:`\mathcal{M}`, and repeat this up to the final integration time.  More explicitly, let :math:`h_n` be the size of the :math:`n-th` time step, we then update :math:`y_n\in\mathcal{M}` to :math:`y_{n+1}` by
+The underlying idea of RKMK methods is to express a vector field :math:`F\in\mathfrak{X}(\mathcal{M})` as :math:`F\vert_m = \Psi_*(f(m))\vert_m` , 
+where :math:`m \in \mathcal{M}` , :math:`\Psi_*` is the infinitesimal generator of :math:`\Psi`, a transitive action on :math:`\mathcal{M}`, and :math:`f:\mathcal{M}\rightarrow\mathfrak{g}`. This allows us to transform the problem from the manifold :math:`\mathcal{M}` to the Lie algebra :math:`\mathfrak{g}`, on which we can perform a time step integration. We then map the result back to :math:`\mathcal{M}`, and repeat this up to the final integration time.  More explicitly, let :math:`h_n` be the size of the :math:`n` -th time step, we then update :math:`y_n\in\mathcal{M}` to :math:`y_{n+1}` by
 
 .. math::
     :name: eq:1
@@ -20,7 +21,7 @@ The underlying idea of RKMK methods is to express a vector field :math:`F\in\mat
 where :math:`\sigma_1\approx \sigma(h_n)\in\mathfrak{g}` is computed with a Runge-Kutta method.
 
 
-One approach for varying the step size is based on embedded Runge--Kutta pairs for vector spaces. This approach consists of a principal method of order :math:`p`, used to propagate the numerical solution, together with some auxiliary method, of order :math:`\tilde{p}<p`, that is only used to obtain an estimate of the local error. This local error estimate is in turn used to derive a step size adjustment formula that attempts to keep the local error estimate approximately equal to some user-defined tolerance :math:`\textrm{tol}` in every step.
+One approach for varying the step size is based on embedded Runge-Kutta pairs for vector spaces. This approach consists of a principal method of order :math:`p`, used to propagate the numerical solution, together with some auxiliary method, of order :math:`\tilde{p}<p`, that is only used to obtain an estimate of the local error. This local error estimate is in turn used to derive a step size adjustment formula that attempts to keep the local error estimate approximately equal to some user-defined tolerance :math:`\textrm{tol}` in every step.
 Both methods are applied to solve the ODE for :math:`\sigma(t)` in :ref:`(1) <eq:1>`, yielding two approximations :math:`\sigma_1` and :math:`\tilde{\sigma}_1` respectively, using the same step size :math:`h_n`. Now, some distance measure between :math:`\sigma_1` and  :math:`\tilde{\sigma}_1` provides an estimate :math:`e_{n+1}` for the size of the local truncation error. Thus,
 :math:`e_{n+1}=C
 h_{n+1}^{\tilde{p}+1}+\mathcal{O}(h^{\tilde{p}+2})`. Aiming at :math:`e_{n+1}\approx\textrm{tol}` in every step, one may use a formula of the type
@@ -39,5 +40,5 @@ In our `code <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrat
 We consider `the RKMK pair coming from Dormand–Prince method (DOPRI 5(4), which we denote by RKMK(5,4)) <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK45.m>`_.
 We set a tolerance of :math:`10^{-6}` and solve the system with the RKMK(5,4) scheme. 
 Fixing the number of time steps required by RKMK(5,4), we repeat the experiment with `RKMK of order 5 (denoted by RKMK5) <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator/blob/main/src/integrators/RKMK5.m>`_. 
-The comparison occurs at the final time :math:`T=3` using the Euclidean norm of the ambient space :math:`\mathbb{R}^{6N}`. 
+The comparison occurs at the final time :math:`T=3` using the Euclidean norm of the ambient space :math:`\mathbb{R}^{6N}`, where :math:`N` is the number of the connected pendulums. 
 The quality of the approximation is measured against a reference solution obtained with ODE45 from MATLAB with a strict tolerance.
