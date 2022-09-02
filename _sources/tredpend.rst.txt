@@ -10,7 +10,7 @@ The dynamics of this mechanical system is described in terms of a Lie group :mat
 The equations of motion are presented in terms of the infinitesimal generator of the transitive action.
 
 .. _eom:
-
+ 
 Equations of motion
 -------------------
 
@@ -37,12 +37,14 @@ The Euler–Lagrange equations of the system can be written as
 where :math:`R(q)\in\mathbb{R}^{3N\times 3N}` is a symmetric block matrix defined as
 
 .. math::
+    :name: eq:
 
     \begin{align}
         R(q)_{ii} = \Big(\sum_{j=i}^Nm_j\Big)L_i^2I_3\in\mathbb{R}^{3\times 3},
     \end{align}
     
 .. math::
+    :name: eq:
 
     \begin{align}
         R(q)_{ij} = \Big(\sum_{k=j}^N m_k\Big)L_iL_j\hat{q}_i^T\hat{q}_j\in\mathbb{R}^{3\times 3} = R(q)_{ji}^T,\; i<j,
@@ -51,6 +53,7 @@ where :math:`R(q)\in\mathbb{R}^{3N\times 3N}` is a symmetric block matrix define
 and 
 
 .. math::
+    :name: eq:
 
     \begin{align}
         M_{ij} =\Big(\sum_{k={\text{max}}\{i,j\}}^N m_k\Big)L_iL_j I_3\in\mathbb{R}^{3\times 3}.
@@ -59,6 +62,7 @@ and
 Equations :ref:`(1) <eq:1>` and :ref:`(2) <eq:2>` define the dynamics of the N-fold pendulum, and hence a vector field :math:`F\in\mathfrak{X}((TS^2)^N)`. We now find a function :math:`f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N` such that
 
 .. math::
+    :name: eq:
 
     \begin{align}
         \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N.
@@ -67,6 +71,7 @@ Equations :ref:`(1) <eq:1>` and :ref:`(2) <eq:2>` define the dynamics of the N-f
 Since :math:`R(q)` defines a linear invertible map (see `(Celledoni, Çokaj, Leone, Murari and Owren, (2021) International Journal of Computer Mathematics) <https://doi.org/10.1080/00207160.2021.1966772>`_).
 
 .. math::
+    :name: eq:
 
     \begin{align}
         A_{q}:T_{q_1}S^2\times ... \times T_{q_N}S^2 \rightarrow T_{q_1}S^2 \times ... \times T_{q_N}S^2,\quad A_q(\omega):=R(q)\omega,
@@ -85,6 +90,7 @@ In equation :ref:`(3) <eq:3>` the :math:`r_i` -s for :math:`i = 1, ..., N` are d
 and :math:`a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`a_i(q,\omega):=q_i\times h_i(q,\omega)`, :math:`i = 1, ..., N`. Thus, the map :math:`f` is given by
 
 .. math::
+    :name: eq:
 
     \begin{align}
         f(q,\omega) = \begin{bmatrix}

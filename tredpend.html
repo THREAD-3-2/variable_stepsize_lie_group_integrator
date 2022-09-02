@@ -54,43 +54,43 @@ The equations of motion are presented in terms of the infinitesimal generator of
     R(q)\dot{\omega} = \left[\sum_{\substack{j=1\\ j\neq i}}^N M_{ij}|\omega_j|^2\hat{q}_i q_j - \Big(\sum_{j=i}^N m_j\Big)gL_i \hat{q}_i e_3 \right]_{i=1,...,N} = \begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\in\mathbb{R}^{3N},
 \end{align}\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(R(q)\in\mathbb{R}^{3N\times 3N}\)</span> is a symmetric block matrix defined as</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="eq">
+<span id="equation-eq"></span><span class="eqno">(3)<a class="headerlink" href="#eq" title="Permalink to this equation">¶</a></span>\[\begin{align}
     R(q)_{ii} = \Big(\sum_{j=i}^Nm_j\Big)L_i^2I_3\in\mathbb{R}^{3\times 3},
 \end{align}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="id2">
+<span id="equation-eq"></span><span class="eqno">(4)<a class="headerlink" href="#id2" title="Permalink to this equation">¶</a></span>\[\begin{align}
     R(q)_{ij} = \Big(\sum_{k=j}^N m_k\Big)L_iL_j\hat{q}_i^T\hat{q}_j\in\mathbb{R}^{3\times 3} = R(q)_{ji}^T,\; i&lt;j,
 \end{align}\]</div>
 <p>and</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="id3">
+<span id="equation-eq"></span><span class="eqno">(5)<a class="headerlink" href="#id3" title="Permalink to this equation">¶</a></span>\[\begin{align}
     M_{ij} =\Big(\sum_{k={\text{max}}\{i,j\}}^N m_k\Big)L_iL_j I_3\in\mathbb{R}^{3\times 3}.
 \end{align}\]</div>
 <p>Equations <a class="reference internal" href="#eq-1"><span class="std std-ref">(1)</span></a> and <a class="reference internal" href="#eq-2"><span class="std std-ref">(2)</span></a> define the dynamics of the N-fold pendulum, and hence a vector field <span class="math notranslate nohighlight">\(F\in\mathfrak{X}((TS^2)^N)\)</span>. We now find a function <span class="math notranslate nohighlight">\(f:(TS^2)^N\rightarrow \mathfrak{se}(3)^N\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="id4">
+<span id="equation-eq"></span><span class="eqno">(6)<a class="headerlink" href="#id4" title="Permalink to this equation">¶</a></span>\[\begin{align}
     \Psi_*(f(m))\vert_m = F\vert_m,\;\;\forall m\in (TS^2)^N.
 \end{align}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(R(q)\)</span> defines a linear invertible map (see <a class="reference external" href="https://doi.org/10.1080/00207160.2021.1966772">(Celledoni, Çokaj, Leone, Murari and Owren, (2021) International Journal of Computer Mathematics)</a>).</p>
-<div class="math notranslate nohighlight">
-\[\begin{align}
+<div class="math notranslate nohighlight" id="id5">
+<span id="equation-eq"></span><span class="eqno">(7)<a class="headerlink" href="#id5" title="Permalink to this equation">¶</a></span>\[\begin{align}
     A_{q}:T_{q_1}S^2\times ... \times T_{q_N}S^2 \rightarrow T_{q_1}S^2 \times ... \times T_{q_N}S^2,\quad A_q(\omega):=R(q)\omega,
 \end{align}\]</div>
 <p>we can rewrite the ODEs for the angular velocities as follows:</p>
 <div class="math notranslate nohighlight" id="eq-3">
-<span id="equation-eq-3"></span><span class="eqno">(3)<a class="headerlink" href="#eq-3" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+<span id="equation-eq-3"></span><span class="eqno">(8)<a class="headerlink" href="#eq-3" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
     \dot{\omega}= A_{q}^{-1}\left(\begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\right) =\begin{bmatrix} h_1(q,\omega) \\ \vdots \\ h_N(q,\omega)\end{bmatrix} = \begin{bmatrix} a_1(q,\omega)\times q_1 \\ \vdots \\ a_N(q,\omega)\times q_N \end{bmatrix}.
 \end{align}\end{split}\]</div>
 <p>In equation <a class="reference internal" href="#eq-3"><span class="std std-ref">(3)</span></a> the <span class="math notranslate nohighlight">\(r_i\)</span> -s for <span class="math notranslate nohighlight">\(i = 1, ..., N\)</span> are defined as in <a class="reference internal" href="#eq-2"><span class="std std-ref">(2)</span></a> ,
 and <span class="math notranslate nohighlight">\(a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3\)</span> can be defined as <span class="math notranslate nohighlight">\(a_i(q,\omega):=q_i\times h_i(q,\omega)\)</span>, <span class="math notranslate nohighlight">\(i = 1, ..., N\)</span>. Thus, the map <span class="math notranslate nohighlight">\(f\)</span> is given by</p>
 <div class="math notranslate nohighlight">
-\[\begin{split} \begin{align}
+\[ \begin{align}\begin{aligned}:name: eq:\\\begin{split} \begin{align}
      f(q,\omega) = \begin{bmatrix}
      \omega_1 \\
      q_1\times h_1(q,\omega) \\ \vdots \\ \omega_N \\ q_N\times h_N(q,\omega)
      \end{bmatrix}\in\mathfrak{se}(3)^N\simeq \mathbb{R}^{6N}.
-\end{align}\end{split}\]</div>
+\end{align}\end{split}\end{aligned}\end{align} \]</div>
 </section>
 </section>
 
