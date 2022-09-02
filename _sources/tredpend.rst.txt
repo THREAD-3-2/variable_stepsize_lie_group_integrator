@@ -90,10 +90,11 @@ In equation :ref:`(8) <eq:8>` the :math:`r_i` -s for :math:`i = 1, ..., N` are d
 and :math:`a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`a_i(q,\omega):=q_i\times h_i(q,\omega)`, :math:`i = 1, ..., N`. Thus, the map :math:`f` is given by
 
 .. math::
-
+    :name: eq:
+    
     \begin{align}
         f(q,\omega) = \begin{bmatrix}
         \omega_1 \\
         q_1\times h_1(q,\omega) \\ \vdots \\ \omega_N \\ q_N\times h_N(q,\omega)
         \end{bmatrix}\in\mathfrak{se}(3)^N\simeq \mathbb{R}^{6N}.
-   \end{align}
+    \end{align}
