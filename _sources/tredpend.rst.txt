@@ -80,13 +80,13 @@ Since :math:`R(q)` defines a linear invertible map (see `(Celledoni, Çokaj, Leo
 we can rewrite the ODEs for the angular velocities as follows:
 
 .. math::
-    :name: eq:3
+    :name: eq:8
     
     \begin{align}
         \dot{\omega}= A_{q}^{-1}\left(\begin{bmatrix}r_1\\ \vdots \\ r_N \end{bmatrix}\right) =\begin{bmatrix} h_1(q,\omega) \\ \vdots \\ h_N(q,\omega)\end{bmatrix} = \begin{bmatrix} a_1(q,\omega)\times q_1 \\ \vdots \\ a_N(q,\omega)\times q_N \end{bmatrix}.
     \end{align}
    
-In equation :ref:`(3) <eq:3>` the :math:`r_i` -s for :math:`i = 1, ..., N` are defined as in :ref:`(2) <eq:2>` ,
+In equation :ref:`(8) <eq:8>` the :math:`r_i` -s for :math:`i = 1, ..., N` are defined as in :ref:`(2) <eq:2>` ,
 and :math:`a_1,...,a_N:(TS^2)^N\rightarrow \mathbb{R}^3` can be defined as :math:`a_i(q,\omega):=q_i\times h_i(q,\omega)`, :math:`i = 1, ..., N`. Thus, the map :math:`f` is given by
 
 .. math::
