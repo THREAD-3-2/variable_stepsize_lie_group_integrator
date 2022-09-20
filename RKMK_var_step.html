@@ -36,9 +36,9 @@
           <div class="body" role="main">
             
   <section id="integration-methods">
-<span id="rkmk-var-step"></span><h1>Integration methods<a class="headerlink" href="#integration-methods" title="Permalink to this heading">¶</a></h1>
+<h1>Integration methods<a class="headerlink" href="#integration-methods" title="Permalink to this heading">¶</a></h1>
 <section id="runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size">
-<h2>Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size<a class="headerlink" href="#runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size" title="Permalink to this heading">¶</a></h2>
+<span id="rkmk-var-step"></span><h2>Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size<a class="headerlink" href="#runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size" title="Permalink to this heading">¶</a></h2>
 <p>The underlying idea of RKMK methods is to express a vector field <span class="math notranslate nohighlight">\(F\in\mathfrak{X}(\mathcal{M})\)</span> as <span class="math notranslate nohighlight">\(F\vert_m = \Psi_*(f(m))\vert_m\)</span> ,
 where <span class="math notranslate nohighlight">\(m \in \mathcal{M}\)</span> , <span class="math notranslate nohighlight">\(\Psi_*\)</span> is the infinitesimal generator of <span class="math notranslate nohighlight">\(\Psi\)</span>, a transitive action on <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and <span class="math notranslate nohighlight">\(f:\mathcal{M}\rightarrow\mathfrak{g}\)</span>. This allows us to transform the problem from the manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> to the Lie algebra <span class="math notranslate nohighlight">\(\mathfrak{g}\)</span>, on which we can perform a time step integration. We then map the result back to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and repeat this up to the final integration time.  More explicitly, let <span class="math notranslate nohighlight">\(h_n\)</span> be the size of the <span class="math notranslate nohighlight">\(n\)</span> -th time step, we then update <span class="math notranslate nohighlight">\(y_n\in\mathcal{M}\)</span> to <span class="math notranslate nohighlight">\(y_{n+1}\)</span> by</p>
 <div class="math notranslate nohighlight" id="eq-1">
