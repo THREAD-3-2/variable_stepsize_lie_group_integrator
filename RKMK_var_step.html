@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size &#8212; variable_stepsize_lie_group_integrator 0.1 documentation</title>
+    <title>Integration methods &#8212; variable_stepsize_lie_group_integrator 0.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -35,8 +35,10 @@
 
           <div class="body" role="main">
             
-  <section id="runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size">
-<span id="rkmk-var-step"></span><h1>Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size<a class="headerlink" href="#runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size" title="Permalink to this heading">¶</a></h1>
+  <section id="integration-methods">
+<span id="rkmk-var-step"></span><h1>Integration methods<a class="headerlink" href="#integration-methods" title="Permalink to this heading">¶</a></h1>
+<section id="runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size">
+<h2>Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size<a class="headerlink" href="#runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size" title="Permalink to this heading">¶</a></h2>
 <p>The underlying idea of RKMK methods is to express a vector field <span class="math notranslate nohighlight">\(F\in\mathfrak{X}(\mathcal{M})\)</span> as <span class="math notranslate nohighlight">\(F\vert_m = \Psi_*(f(m))\vert_m\)</span> ,
 where <span class="math notranslate nohighlight">\(m \in \mathcal{M}\)</span> , <span class="math notranslate nohighlight">\(\Psi_*\)</span> is the infinitesimal generator of <span class="math notranslate nohighlight">\(\Psi\)</span>, a transitive action on <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and <span class="math notranslate nohighlight">\(f:\mathcal{M}\rightarrow\mathfrak{g}\)</span>. This allows us to transform the problem from the manifold <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> to the Lie algebra <span class="math notranslate nohighlight">\(\mathfrak{g}\)</span>, on which we can perform a time step integration. We then map the result back to <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, and repeat this up to the final integration time.  More explicitly, let <span class="math notranslate nohighlight">\(h_n\)</span> be the size of the <span class="math notranslate nohighlight">\(n\)</span> -th time step, we then update <span class="math notranslate nohighlight">\(y_n\in\mathcal{M}\)</span> to <span class="math notranslate nohighlight">\(y_{n+1}\)</span> by</p>
 <div class="math notranslate nohighlight" id="eq-1">
@@ -65,6 +67,7 @@ Fixing the number of time steps required by RKMK(5,4), we repeat the experiment 
 The comparison occurs at the final time <span class="math notranslate nohighlight">\(T=3\)</span> using the Euclidean norm of the ambient space <span class="math notranslate nohighlight">\(\mathbb{R}^{6N}\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> is the number of the connected pendula.
 The quality of the approximation is measured against a reference solution obtained with ODE45 from MATLAB with a strict tolerance.</p>
 </section>
+</section>
 
 
           </div>
@@ -84,7 +87,10 @@ The quality of the approximation is measured against a reference solution obtain
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Integration methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#runge-kutta-munthe-kaas-rkmk-methods-with-variable-step-size">Runge-Kutta-Munthe-Kaas (RKMK) methods with variable step size</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tredpend.html">Example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matlab.html">MATLAB code</a></li>
 </ul>
