@@ -1,5 +1,5 @@
 ==========================================================
- Documentation of `variable_stepsize_lie_group_integrator`
+ Variable Stepsize Lie Group Integrator Documentation
 ==========================================================
 
 `variable_stepsize_lie_group_integrator <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator>`_
@@ -14,8 +14,9 @@ Contents
 ========
 
 .. toctree::
-   RKMK_var_step
+   installation
    tredpend
+   RKMK_var_step
    matlab
    :maxdepth: 2
 
