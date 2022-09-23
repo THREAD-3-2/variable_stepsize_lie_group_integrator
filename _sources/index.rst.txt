@@ -1,5 +1,5 @@
 ==========================================================
- Variable Stepsize Lie Group Integrator Documentation
+Documentation of 'variable_stepsize_lie_group_integrator'
 ==========================================================
 
 `variable_stepsize_lie_group_integrator <https://github.com/THREAD-3-2/variable_stepsize_lie_group_integrator>`_
